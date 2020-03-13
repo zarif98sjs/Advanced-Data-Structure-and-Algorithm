@@ -1,4 +1,14 @@
 
+/**
+
+Complexity : O(V^3)
+
+Note : Works with negative weight , but not with negative cycle
+Can be used to detect negative cycles (the main diagonal i.e dis[i][i] will have at least one negative value
+                                       which will indicate the presence of at least one negative cycle)
+
+**/
+
 /**Which of the favors of your Lord will you deny ?**/
 
 #include<bits/stdc++.h>

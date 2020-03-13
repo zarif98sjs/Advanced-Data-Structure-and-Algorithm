@@ -1,4 +1,10 @@
 
+/**
+
+Complexity : O(V+E)
+
+**/
+
 /**Which of the favors of your Lord will you deny ?**/
 
 #include<bits/stdc++.h>

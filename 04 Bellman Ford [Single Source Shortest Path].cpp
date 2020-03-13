@@ -1,4 +1,12 @@
 
+/**
+
+Complexity : O(EV)
+
+Note : Works with negative weight , but not with negative cycle
+
+**/
+
 /**Which of the favors of your Lord will you deny ?**/
 
 #include<bits/stdc++.h>

@@ -1,4 +1,12 @@
 
+/**
+
+Complexity : O(ElogV)
+
+Note : No guarantee of working with negative weight , does not work with negative cycle either
+
+**/
+
 /**Which of the favors of your Lord will you deny ?**/
 
 #include<bits/stdc++.h>
