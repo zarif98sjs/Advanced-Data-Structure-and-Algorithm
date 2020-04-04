@@ -101,7 +101,7 @@ int main()
         int type;
         cin>>type;
 
-        if(type==1) /** POINT update **/
+        if(type==1) /** POINT update , adds to the current value **/
         {
             int idx,val;
             cin>>idx>>val;
@@ -109,7 +109,7 @@ int main()
             update(idx,val,n);
             update(idx+1,-val,n);
         }
-        if(type==2) /** RANGE update **/
+        if(type==2) /** RANGE update , adds to the current value **/
         {
             int l,r,val;
             cin>>l>>r>>val;

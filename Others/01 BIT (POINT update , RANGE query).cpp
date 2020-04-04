@@ -61,7 +61,7 @@ int ara[nmax];
 /*** 1 based indexing ***/
 
 LL BIT[nmax];
-void update(int index,int val,int len)
+void update(int index,int val,int len) /** POINT update , adds to the current value **/
 {
     while(index<=len)
     {
@@ -70,7 +70,7 @@ void update(int index,int val,int len)
     }
 }
 
-LL query(int index)
+LL query(int index) /** RANGE query **/
 {
     LL sum=0;
     while(index>0)
