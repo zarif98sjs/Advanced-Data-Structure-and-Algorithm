@@ -1,5 +1,6 @@
 # Advanced-Data-Structure-and-Algorithm
-All the Data Structures and Algorithms learnt in CSE 208 course in BUET is implemented here in CP(Competetive Programming) Style.<br>
+
+## Table of Content
 
 * BFS
 * DFS
@@ -15,6 +16,9 @@ All the Data Structures and Algorithms learnt in CSE 208 course in BUET is imple
   * Range Update , Range Query
 * Merge Sort Tree
 * Sweep Line Algorithm
+* Mo's Algorithm (Square Root Decomposition)
+  * Range Sum Query
+  * Range Mode (Highest Frequency) Query
 
 ### Md. Zarif Ul Alam
 Computer Science & Engineering Department , BUET
