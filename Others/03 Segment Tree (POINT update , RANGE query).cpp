@@ -58,6 +58,7 @@ string to_str(LL x)
 LL ara[nmax];
 
 /** Segment Tree **/
+/*** 1 based indexing ***/
 
 struct node
 {
