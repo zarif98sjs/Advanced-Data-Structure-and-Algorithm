@@ -3,6 +3,8 @@
 
 Problem : Longest Palindromic Subsequence
 
+Idea : Just Reverse the string and find LCS
+
 **/
 
 /**Which of the favors of your Lord will you deny ?**/

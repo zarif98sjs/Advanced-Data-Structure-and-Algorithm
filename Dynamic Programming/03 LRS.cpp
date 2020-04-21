@@ -3,6 +3,8 @@
 
 Problem : Longest Repeated Subsequence
 
+Idea : LCS(X,X) . The extra point to note is that i!=j
+
 **/
 
 /**Which of the favors of your Lord will you deny ?**/
@@ -63,7 +65,7 @@ string to_str(LL x)
 
 unordered_map<string,int>dp;
 
-int lps_length(string X,string Y,int m,int n)
+int lrs_length(string X,string Y,int m,int n)
 {
     if(m==0 || n==0)
         return 0;
@@ -73,29 +75,29 @@ int lps_length(string X,string Y,int m,int n)
     if(dp.find(key)!=dp.end())
         return dp[key];
 
-    if(X[m-1]==Y[n-1])
-        dp[key] = 1 + lps_length(X,Y,m-1,n-1);
+    if(X[m-1]==Y[n-1] && m!=n)
+        dp[key] = 1 + lrs_length(X,Y,m-1,n-1);
     else
-        dp[key] = max(lps_length(X,Y,m-1,n),lps_length(X,Y,m,n-1));
+        dp[key] = max(lrs_length(X,Y,m-1,n),lrs_length(X,Y,m,n-1));
 
     return dp[key];
 }
 
-string lps_print(string X,string Y,int m,int n)
+string lrs_print(string X,string Y,int m,int n)
 {
     if(m==0 || n==0)
         return "";
 
-    if(X[m-1]==Y[n-1])
-        return lps_print(X,Y,m-1,n-1) + X[m-1];
+    if(X[m-1]==Y[n-1] && m!=n)
+        return lrs_print(X,Y,m-1,n-1) + X[m-1];
 
     string key1  = to_str(m) + "|" + to_str(n-1);
     string key2  = to_str(m-1) + "|" + to_str(n);
 
     if(dp[key1]>dp[key2])
-        return lps_print(X,Y,m,n-1);
+        return lrs_print(X,Y,m,n-1);
     else
-        return lps_print(X,Y,m-1,n);
+        return lrs_print(X,Y,m-1,n);
 
 }
 
@@ -103,12 +105,11 @@ int main()
 {
     optimizeIO();
 
-    string X = "ABBDCACB";
+    string X = "ATACTCGGA";
     string Y = X;
-    reverse(ALL(Y));
 
-    cout<<"LPS Length : "<<lps_length(X,Y,X.size(),Y.size())<<endl;
-    cout<<"LPS : "<<lps_print(X,Y,X.size(),Y.size())<<endl;
+    cout<<"LPS Length : "<<lrs_length(X,Y,X.size(),Y.size())<<endl;
+    cout<<"LPS : "<<lrs_print(X,Y,X.size(),Y.size())<<endl;
 
     return 0;
 }
