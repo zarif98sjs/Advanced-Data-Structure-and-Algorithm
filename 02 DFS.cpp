@@ -74,7 +74,7 @@ void dfs(int u)
     for(int next:adj[u])
     {
         if(!vis[next])
-            dfs(u);
+            dfs(next);
     }
 }
 
