@@ -1,7 +1,7 @@
 
 /**
 
-Problem : Longest Increasing Subsequence
+Problem : Maximum Increasing Subsequence Sum
 
 **/
 
@@ -64,41 +64,48 @@ string to_str(LL x)
 /** 1 based indexing **/
 
 /**
-LIS[i] = LIS ending at index i
+ISum[i] = Maximum increasing subsequence sum ending at i
 **/
-int LIS[nmax];
-vector<int>SEQ[nmax];
+int ISum[nmax];
+vector<int>ISEQ[nmax];
 
 int main()
 {
     optimizeIO();
 
-    vector<int>ara = {-1,6,2,5,1,7,4,8,3};
+    vector<int>ara = {-1,0,8,4,12,2,10,6,14,1,9,5,13,3,11}; /** 1 based indexing **/
     int n=ara.size()-1;
 
-    for(int i=1;i<=n;i++)
+    for(int i=1; i<=n; i++)
     {
-        LIS[i] = 1;
-        for(int j=1;j<=i;j++)
+        ISum[i] = ara[i];
+        for(int j=1; j<=i; j++)
         {
-            if(ara[i]>ara[j])
+            if(ara[i]>ara[j]) /** If increasing subsequence **/
             {
-                LIS[i] = max(LIS[i],LIS[j]+1); /** **/
-                if(SEQ[j].size()+1 > SEQ[i].size()) SEQ[i] = SEQ[j];
+                if(ISum[j]+ara[i] > ISum[i]) /** If (current max in ara[1...j]+ara[i]) is greater than current value **/
+                {
+                    ISum[i] = ISum[j]+ara[i];
+                    ISEQ[i] = ISEQ[j];
+                }
             }
         }
-        SEQ[i].push_back(ara[i]);
+        ISEQ[i].push_back(ara[i]);
     }
 
-    int lis_len = *max_element(LIS+1,LIS+n+1);
+//    for(int i=1;i<=n;i++)
+//        cout<<"ISum "<<ara[i]<<" : "<<ISum[i]<<endl;
 
-    vector<int>lis = SEQ[1];
+    int max_sum = 0;
+    int max_sum_idx = 0;
 
-    for(int i=2;i<=n;i++)
-        if(SEQ[i].size()>lis.size())
-            lis = SEQ[i];
+    for(int i=1; i<=n; i++)
+        if(ISum[i]>max_sum)
+            max_sum = ISum[i], max_sum_idx = i;
 
-    for(auto x:lis)
+    cout<<"Maximum Sum : "<<max_sum<<endl;
+    cout<<"Increasing Subsequence with maximum sum : ";
+    for(auto x:ISEQ[max_sum_idx])
         cout<<x<<" ";
     cout<<endl;
 

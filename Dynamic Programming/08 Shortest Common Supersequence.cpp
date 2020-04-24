@@ -80,7 +80,7 @@ int solve(string X,string Y,int m,int n)
     if(X[m-1]==Y[n-1])
         dp[key] = 1 + solve(X,Y,m-1,n-1); /** Take that and solve for the rest **/
     else
-        dp[key] = 1 + min(solve(X,Y,m-1,n),solve(X,Y,m,n-1)); /** Take either one and solve for the both **/
+        dp[key] = 1 + min(solve(X,Y,m-1,n),solve(X,Y,m,n-1)); /** Take either one and solve for the both and take the minimum one **/
 
     return dp[key];
 }

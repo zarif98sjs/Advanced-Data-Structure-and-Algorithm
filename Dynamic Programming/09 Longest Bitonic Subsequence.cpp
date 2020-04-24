@@ -65,15 +65,18 @@ string to_str(LL x)
 
 /**
 LIS[i] = LIS ending at index i
+LDS[i] = LDS starting at index i (Basically LIS thinking from the reverse side)
 **/
 int LIS[nmax];
-vector<int>SEQ[nmax];
+int LDS[nmax];
+vector<int>ISEQ[nmax];
+vector<int>DSEQ[nmax];
 
 int main()
 {
     optimizeIO();
 
-    vector<int>ara = {-1,6,2,5,1,7,4,8,3};
+    vector<int>ara = {-1,4,2,5,9,7,6,10,3,1}; /** 1 based indexing **/
     int n=ara.size()-1;
 
     for(int i=1;i<=n;i++)
@@ -84,21 +87,53 @@ int main()
             if(ara[i]>ara[j])
             {
                 LIS[i] = max(LIS[i],LIS[j]+1); /** **/
-                if(SEQ[j].size()+1 > SEQ[i].size()) SEQ[i] = SEQ[j];
+                if(ISEQ[j].size()+1 > ISEQ[i].size()) ISEQ[i] = ISEQ[j];
             }
         }
-        SEQ[i].push_back(ara[i]);
+        ISEQ[i].push_back(ara[i]);
     }
 
-    int lis_len = *max_element(LIS+1,LIS+n+1);
+    for(int i=n;i>=1;i--)
+    {
+        LDS[i] = 1;
+        for(int j=n;j>=i;j--)
+        {
+            if(ara[i]>ara[j])
+            {
+                LDS[i] = max(LDS[i],LDS[j]+1);
+                if(DSEQ[j].size()+1 > DSEQ[i].size()) DSEQ[i] = DSEQ[j];
+            }
+        }
+        DSEQ[i].push_back(ara[i]);
+    }
 
-    vector<int>lis = SEQ[1];
+    for(int i=1;i<=n;i++)
+        cout<<"LIS & LDS "<<i<<" : "<<LIS[i]<<" , "<<LDS[i]<<endl;
 
-    for(int i=2;i<=n;i++)
-        if(SEQ[i].size()>lis.size())
-            lis = SEQ[i];
+    int lbs_len = 0;
+    vector<int>lbs1;
+    vector<int>lbs2;
 
-    for(auto x:lis)
+    for(int i=1;i<=n;i++)
+    {
+        if(LIS[i]+LDS[i]-1>lbs_len)
+        {
+            lbs_len = LIS[i]+LDS[i]-1;
+            lbs1 = ISEQ[i];
+            lbs2 = DSEQ[i];
+        }
+    }
+
+    cout<<lbs_len<<endl;
+
+    cout<<"Increasing Part : ";
+    for(auto x:lbs1)
+        cout<<x<<" ";
+    cout<<endl;
+
+    cout<<"Decreasing Part : ";
+    reverse(ALL(lbs2));
+    for(auto x:lbs2)
         cout<<x<<" ";
     cout<<endl;
 
