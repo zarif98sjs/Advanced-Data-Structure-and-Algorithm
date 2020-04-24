@@ -1,7 +1,7 @@
 
 /**
 
-Problem : Longest Common Subsequence
+Problem : Shortest Common Supersequence
 
 **/
 
@@ -62,15 +62,15 @@ string to_str(LL x)
 //}
 
 /**
-LCS[i][j] = LCS(X[1...i],Y[1...j])
+SCS[i][j] = SCS(X[1...i],Y[1...j])
 **/
 
 unordered_map<string,int>dp;
 
-int lcs_length(string X,string Y,int m,int n)
+int solve(string X,string Y,int m,int n)
 {
     if(m==0 || n==0)
-        return 0;
+        return max(m,n); /** If one string has ended return the remaining length of the other string **/
 
     string key  = to_str(m) + "|" + to_str(n);
 
@@ -78,28 +78,28 @@ int lcs_length(string X,string Y,int m,int n)
         return dp[key];
 
     if(X[m-1]==Y[n-1])
-        dp[key] = 1 + lcs_length(X,Y,m-1,n-1);
+        dp[key] = 1 + solve(X,Y,m-1,n-1); /** Take that and solve for the rest **/
     else
-        dp[key] = max(lcs_length(X,Y,m-1,n),lcs_length(X,Y,m,n-1));
+        dp[key] = 1 + min(solve(X,Y,m-1,n),solve(X,Y,m,n-1)); /** Take either one and solve for the both **/
 
     return dp[key];
 }
 
-string lcs_print(string X,string Y,int m,int n)
+string solve_print(string X,string Y,int m,int n)
 {
-    if(m==0 || n==0)
-        return "";
+    if(m==0) return Y.substr(0,n);
+    if(n==0) return X.substr(0,m);
 
     if(X[m-1]==Y[n-1])
-        return lcs_print(X,Y,m-1,n-1) + X[m-1];
+        return solve_print(X,Y,m-1,n-1) + X[m-1];
 
     string key1  = to_str(m) + "|" + to_str(n-1);
     string key2  = to_str(m-1) + "|" + to_str(n);
 
-    if(dp[key1]>dp[key2])
-        return lcs_print(X,Y,m,n-1);
+    if(dp[key1]<dp[key2])
+        return solve_print(X,Y,m,n-1) + Y[n-1];
     else
-        return lcs_print(X,Y,m-1,n);
+        return solve_print(X,Y,m-1,n) + X[m-1];
 
 }
 
@@ -110,8 +110,8 @@ int main()
     string X = "ABCBDAB";
     string Y = "BDCABA";
 
-    cout<<"LCS Length : "<<lcs_length(X,Y,X.size(),Y.size())<<endl;
-    cout<<"LCS : "<<lcs_print(X,Y,X.size(),Y.size())<<endl;
+    cout<<"SCS Length : "<<solve(X,Y,X.size(),Y.size())<<endl;
+    cout<<"SCS : "<<solve_print(X,Y,X.size(),Y.size())<<endl;
 
     return 0;
 }
