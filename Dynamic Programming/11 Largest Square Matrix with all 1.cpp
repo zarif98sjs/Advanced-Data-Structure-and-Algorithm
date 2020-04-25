@@ -1,7 +1,7 @@
 
 /**
 
-Problem : Maximum Increasing Subsequence Sum
+Problem : Largest Square Matrix with all 1's
 
 **/
 
@@ -46,7 +46,7 @@ inline void optimizeIO()
     cin.tie(NULL);
 }
 
-const int nmax = 2e5+7;
+const int nmax = 2e3+7;
 const LL LINF = 1e17;
 
 string to_str(LL x)
@@ -64,51 +64,59 @@ string to_str(LL x)
 /** 1 based indexing **/
 
 /**
-ISum[i] = Maximum increasing subsequence sum ending at i
-ISum[i] = max(ISum[I],ISum[j]+ara[i])
+
+dp[i][j] = Largest Square Matrix with all 1's ending at ara[i][j]
+
+For a square matrix of n*n , the left,top and top left is a n-1*n-1 square matrix.
+So , dp[i][j] = min(dp[i-1][j-1],dp[i][j-1],dp[i-1][j]) // if ara[i][j] = 1
+
+Here the minimum is considered because all 3 corner has to have the same number of 1's , otherwise adding one element
+won't make it a square matrix with all 1's
+
 **/
-int ISum[nmax];
-vector<int>ISEQ[nmax];
+int dp[nmax][nmax];
 
 int main()
 {
     optimizeIO();
 
-    vector<int>ara = {-1,0,8,4,12,2,10,6,14,1,9,5,13,3,11}; /** 1 based indexing **/
-    int n=ara.size()-1;
+    int r = 8 , c = 6;
 
-    for(int i=1; i<=n; i++)
+    int ara[r+1][c+1] =
+	{
+	    { 0, 0, 0, 0, 0, 0, 0 },
+		{ 0, 0, 0, 1, 0, 1, 1 },
+		{ 0, 0, 1, 1, 1, 0, 0 },
+		{ 0, 0, 0, 1, 1, 1, 1 },
+		{ 0, 1, 1, 0, 1, 1, 1 },
+		{ 0, 1, 1, 1, 1, 1, 1 },
+		{ 0, 1, 1, 0, 1, 1, 1 },
+		{ 0, 1, 0, 1, 1, 1, 1 },
+		{ 0, 1, 1, 1, 0, 1, 1 }
+	};
+
+	int max_square_n = 0;
+
+	for(int i=1;i<=r;i++)
     {
-        ISum[i] = ara[i];
-        for(int j=1; j<=i; j++)
+        for(int j=1;j<=c;j++)
         {
-            if(ara[i]>ara[j]) /** If increasing subsequence **/
+            if(ara[i][j]==1)
             {
-                if(ISum[j]+ara[i] > ISum[i]) /** If (current max in ara[1...j]+ara[i]) is greater than current value **/
-                {
-                    ISum[i] = ISum[j]+ara[i];
-                    ISEQ[i] = ISEQ[j];
-                }
+                dp[i][j] = 1 + min(dp[i-1][j-1],min(dp[i][j-1],dp[i-1][j]));
+                max_square_n = max(max_square_n,dp[i][j]);
             }
         }
-        ISEQ[i].push_back(ara[i]);
     }
 
-//    for(int i=1;i<=n;i++)
-//        cout<<"ISum "<<ara[i]<<" : "<<ISum[i]<<endl;
+    cout<<"MAx Square Size : "<<max_square_n<<endl;
 
-    int max_sum = 0;
-    int max_sum_idx = 0;
-
-    for(int i=1; i<=n; i++)
-        if(ISum[i]>max_sum)
-            max_sum = ISum[i], max_sum_idx = i;
-
-    cout<<"Maximum Sum : "<<max_sum<<endl;
-    cout<<"Increasing Subsequence with maximum sum : ";
-    for(auto x:ISEQ[max_sum_idx])
-        cout<<x<<" ";
-    cout<<endl;
+//    for(int i=1;i<=r;i++)
+//    {
+//        for(int j=1;j<=c;j++)
+//            cout<<dp[i][j]<<" ";
+//        cout<<endl;
+//    }
 
     return 0;
 }

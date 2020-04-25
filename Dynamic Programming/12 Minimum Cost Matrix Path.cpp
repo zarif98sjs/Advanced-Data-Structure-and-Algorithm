@@ -1,7 +1,10 @@
 
 /**
 
-Problem : Maximum Increasing Subsequence Sum
+Problem : Minimum Cost Matrix Path
+
+Given a M x N matrix where each cell has a cost associated with it, find the minimum cost to reach last cell .
+Available move : One Right || One Down
 
 **/
 
@@ -46,7 +49,7 @@ inline void optimizeIO()
     cin.tie(NULL);
 }
 
-const int nmax = 2e5+7;
+const int nmax = 2e3+7;
 const LL LINF = 1e17;
 
 string to_str(LL x)
@@ -64,51 +67,50 @@ string to_str(LL x)
 /** 1 based indexing **/
 
 /**
-ISum[i] = Maximum increasing subsequence sum ending at i
-ISum[i] = max(ISum[I],ISum[j]+ara[i])
+
+dp[i][j] = minimum cost to reach cost[i][j]
+dp[i][j] = cost[i][j] +  min(dp[i-1][j],dp[i][j-1]) // with corner cases of first row and column
+
 **/
-int ISum[nmax];
-vector<int>ISEQ[nmax];
+int dp[nmax][nmax];
 
 int main()
 {
     optimizeIO();
 
-    vector<int>ara = {-1,0,8,4,12,2,10,6,14,1,9,5,13,3,11}; /** 1 based indexing **/
-    int n=ara.size()-1;
+    int r = 5 , c = 5;
 
-    for(int i=1; i<=n; i++)
+    int cost[r+1][c+1] =
+	{
+	    { 0, 0, 0, 0, 0, 0 },
+		{ 0, 4, 7, 8, 6, 4 },
+		{ 0, 6, 7, 3, 9, 2 },
+		{ 0, 3, 8, 1, 2, 4 },
+		{ 0, 7, 1, 7, 3, 7 },
+		{ 0, 2, 9, 8, 9, 3 }
+	};
+
+	int min_cost = INT_MAX;
+
+	for(int i=1;i<=r;i++)
     {
-        ISum[i] = ara[i];
-        for(int j=1; j<=i; j++)
+        for(int j=1;j<=c;j++)
         {
-            if(ara[i]>ara[j]) /** If increasing subsequence **/
-            {
-                if(ISum[j]+ara[i] > ISum[i]) /** If (current max in ara[1...j]+ara[i]) is greater than current value **/
-                {
-                    ISum[i] = ISum[j]+ara[i];
-                    ISEQ[i] = ISEQ[j];
-                }
-            }
+            if(i==1 && j==1) dp[i][j] = cost[i][j];
+            else if(i==1) dp[i][j] = cost[i][j] + dp[i][j-1];
+            else if(j==1) dp[i][j] = cost[i][j] + dp[i-1][j];
+            else dp[i][j] = cost[i][j] +  min(dp[i-1][j],dp[i][j-1]);
         }
-        ISEQ[i].push_back(ara[i]);
     }
 
-//    for(int i=1;i<=n;i++)
-//        cout<<"ISum "<<ara[i]<<" : "<<ISum[i]<<endl;
+    cout<<"Minimum Cost : "<<dp[r][c]<<endl;
 
-    int max_sum = 0;
-    int max_sum_idx = 0;
-
-    for(int i=1; i<=n; i++)
-        if(ISum[i]>max_sum)
-            max_sum = ISum[i], max_sum_idx = i;
-
-    cout<<"Maximum Sum : "<<max_sum<<endl;
-    cout<<"Increasing Subsequence with maximum sum : ";
-    for(auto x:ISEQ[max_sum_idx])
-        cout<<x<<" ";
-    cout<<endl;
+    for(int i=1;i<=r;i++)
+    {
+        for(int j=1;j<=c;j++)
+            cout<<dp[i][j]<<" ";
+        cout<<endl;
+    }
 
     return 0;
 }
