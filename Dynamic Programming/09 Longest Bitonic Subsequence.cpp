@@ -1,7 +1,7 @@
 
 /**
 
-Problem : Longest Increasing Subsequence
+Problem : Longest Bitonic Subsequence
 
 **/
 
