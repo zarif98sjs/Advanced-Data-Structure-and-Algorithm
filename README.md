@@ -47,6 +47,12 @@
   * [Minimum Cost Matrix Path (Top Left cell to Bottom Right cell)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/12%20Minimum%20Cost%20Matrix%20Path.cpp)
   * [Number of paths in a matrix with certain cost (Top Left cell to Bottom Right cell)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/14%20Number%20of%20Paths%20with%20certain%20cost.cpp)
   * [Longest Sequence formed by adjacent numbers in a matrix](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/13%20Longest%20Sequence%20by%20Adjacent%20Numbers.cpp)
+* ***Knapsack Variant***
+  * [0-1 Knapsack](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/15%200-1%20Knapsack.cpp)
+  * [Partition Problem](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/16%20Partition%20Problem.cpp)
+  * [Minimum Sum Partition Problem](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/17%20Minimum%20Sum%20Partition%20Problem.cpp)
+* ***Miscellaneous***
+  * [N-digit binary strings without any consecutive 1’s](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/18%20Count%20N%20digit%20binary%20string%20without%20consecutive%201's.cpp)
   
 
 ### Md. Zarif Ul Alam
