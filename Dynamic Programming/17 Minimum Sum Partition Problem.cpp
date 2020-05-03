@@ -1,7 +1,7 @@
 
 /**
 
-Problem : Minimum Sum   Partition Problem
+Problem : Minimum Sum Partition Problem
 
 Given a set of positive integers S, partition the set S into two subsets S1, S2 such that
 the difference between the sum of elements in S1 and the sum of elements in S2 is minimized.
