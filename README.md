@@ -51,6 +51,14 @@
   * [0-1 Knapsack](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/15%200-1%20Knapsack.cpp)
   * [Partition Problem](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/16%20Partition%20Problem.cpp)
   * [Minimum Sum Partition Problem](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/17%20Minimum%20Sum%20Partition%20Problem.cpp)
+* ***Digit DP Variant***
+  * [Number of zeros (LightOj)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/19%20Number%20of%20zeros.cpp)
+  * [Odd Sum Even Sum (SPOJ)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/20%20Odd%20Sum%20Even%20Sum.cpp)
+  * [Digit Min Max Scores (HackerRank)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/21%20Digit%20Min%20Max%20Scores.cpp)
+  * [Adjacent 1 Scores in binary (LightOj)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/22%20Adjacent%201%20Scores%20in%20binary.cpp)
+  * [Divisibility check by Digit Sum (LightOj)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/23%20Divisibility%20check%20by%20Digit%20Sum.cpp)
+  * [Digit Sum (SPOJ)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/24%20Digit%20Sum.cpp)
+  * [Encoding (CodeChef)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/25%20CHEF_LONG%20ENCODING.cpp)
 * ***Miscellaneous***
   * [N-digit binary strings without any consecutive 1’s](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/18%20Count%20N%20digit%20binary%20string%20without%20consecutive%201's.cpp)
   
