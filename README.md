@@ -14,6 +14,8 @@
 * ***Minimum Spanning Tree***
   * [Prim-Jarnik](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/07%20Prim's%20MST.cpp)
   * [Kruskal](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/08%20Kruskal's%20MST.cpp)
+* ***Miscellaneous***
+  * [Lowest Common Ancestor (LCA)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/09%20Lowest%20Common%20Ancestor.cpp)
 
 ## Data Structure
 
@@ -21,6 +23,8 @@
   * *1D BIT*
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/01%20BIT%20(POINT%20update%20%2C%20RANGE%20query).cpp)
     * [Range Update , Point Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/02%20BIT%20(RANGE%20update%20%2C%20POINT%20query).cpp)
+  * *2D BIT*
+    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/10%202D%20BIT%20(POINT%20update%2C%20RANGE%20query).cpp)
 * ***Segment Tree***
   * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp)
   * [Range Update , Range Query (Lazy Propagation)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/04%20Segment%20Tree%20Lazy%20Propagation%20(RANGE%20update%20%2C%20RANGE%20query).cpp)
@@ -29,6 +33,7 @@
 * ***Mo's Algorithm (Square Root Decomposition)***
   * [Range **Sum** Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/07%20Mo's%20Algo%20(RANGE%20sum%20query).cpp)
   * [Range **Mode** (Highest Frequency) Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/09%20Mo's%20Algo%20(RANGE%20mode%20query%20Optimized).cpp)
+
   
 ## Dynamic Programming
 
