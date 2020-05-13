@@ -1,16 +1,16 @@
 # Advanced-Data-Structure-and-Algorithm
 
-## Algorithms
+## Algorithm
 
 * ***Graph Traversal***
-  * [BFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/01%20BFS.cpp)
-  * [DFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/02%20DFS.cpp)
+  * [BFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/01%20BFS.cpp)
+  * [DFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/02%20DFS.cpp)
 * ***Single Source Shortest Path (SSSP)***
-  * [Dijkstra](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/03%20Dijkstra%20%5BSingle%20Source%20Shortest%20Path%5D.cpp)
-  * [Bellman Ford](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/04%20Bellman%20Ford%20%5BSingle%20Source%20Shortest%20Path%5D.cpp)
+  * [Dijkstra](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/03%20Dijkstra%20%5BSingle%20Source%20Shortest%20Path%5D.cpp)
+  * [Bellman Ford](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/04%20Bellman%20Ford%20%5BSingle%20Source%20Shortest%20Path%5D.cpp)
 * ***All Pair Shortest Path (APSP)***
-  * [Floyd Warshall](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/05%20Floyd%20Warshall%20%5BAll%20Pair%20Shortest%20Path%5D.cpp)
-  * [Johnson](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/06%20Johnson%20%5BAll%20Pair%20Shortest%20Path%5D.cpp)
+  * [Floyd Warshall](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/05%20Floyd%20Warshall%20%5BAll%20Pair%20Shortest%20Path%5D.cpp)
+  * [Johnson](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/06%20Johnson%20%5BAll%20Pair%20Shortest%20Path%5D.cpp)
 
 ## Data Structure
 
