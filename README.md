@@ -11,6 +11,9 @@
 * ***All Pair Shortest Path (APSP)***
   * [Floyd Warshall](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/05%20Floyd%20Warshall%20%5BAll%20Pair%20Shortest%20Path%5D.cpp)
   * [Johnson](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/06%20Johnson%20%5BAll%20Pair%20Shortest%20Path%5D.cpp)
+* ***Minimum Spanning Tree***
+  * [Prim-Jarnik](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/07%20Prim's%20MST.cpp)
+  * [Kruskal](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/08%20Kruskal's%20MST.cpp)
 
 ## Data Structure
 
