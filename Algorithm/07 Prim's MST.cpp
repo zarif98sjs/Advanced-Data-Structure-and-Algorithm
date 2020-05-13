@@ -127,6 +127,8 @@ int main()
 
     LL mininum_spanning_tree_value = MinST();
 
+    cout<<mininum_spanning_tree_value<<endl;
+
     return 0;
 }
 
