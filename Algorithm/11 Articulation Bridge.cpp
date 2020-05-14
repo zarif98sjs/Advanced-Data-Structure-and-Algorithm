@@ -1,13 +1,13 @@
 
 /**
 
-Articulation Point
+Articulation Bridge
 
 Complexity : O(N+M)
 
 Resources:
 1 ) http://www.shafaetsplanet.com/?p=2504
-2 ) https://cp-algorithms.com/graph/cutpoints.html
+2 ) https://cp-algorithms.com/graph/bridge-searching.html
 
 **/
 
@@ -72,7 +72,7 @@ vector<bool>visited;
 
 vector<int> discov; /** Discovery time in DFS **/
 vector<int> low; /** min(all discovery time of subtree of a vertex u including the back-edge ancestors) **/
-vector<bool> isArticulationPoint;
+vector<PII> articulationBridge;
 int timer;
 
 void initialize()
@@ -81,9 +81,9 @@ void initialize()
     visited.assign(nmax,false);
     discov.assign(nmax,-1);
     low.assign(nmax,-1);
-    isArticulationPoint.assign(nmax,false);
+    articulationBridge.clear();
 
-    for(int i=0;i<nmax;i++)
+    for(int i=0; i<nmax; i++)
         adj[i].clear();
 }
 
@@ -106,9 +106,8 @@ void dfs(int v,int p)
             dfs(next,v);
             low[v] = min(low[v],low[next]);
 
-            if(child>1 && p==-1) isArticulationPoint[v] = true; /** ROOT **/
-
-            if(discov[v]<=low[next] && p!=-1) isArticulationPoint[v] = true;
+            if(discov[v]<low[next])
+                articulationBridge.push_back({v,next});
         }
     }
 }
@@ -138,15 +137,13 @@ int main()
             dfs(i,-1);
     }
 
-    int articulationPoint = 0;
+    int sz = articulationBridge.size();
 
-    for(int i=1; i<=n; i++)
-    {
-        if(isArticulationPoint[i])
-            articulationPoint++;
-    }
+    cout<<sz<<" "<<"Articulation Bridges"<<endl;
 
-    cout<<"Number of Articulation Point : "<<articulationPoint<<endl;
+    for(auto x:articulationBridge)
+        cout<<x.F<<" - "<<x.S<<endl;
+
 
     return 0;
 }
