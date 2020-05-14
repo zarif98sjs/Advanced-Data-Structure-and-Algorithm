@@ -14,6 +14,9 @@
 * ***Minimum Spanning Tree***
   * [Prim-Jarnik](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/07%20Prim's%20MST.cpp)
   * [Kruskal](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/08%20Kruskal's%20MST.cpp)
+* ***Articulation***
+  * [Articulation Point](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/10%20Articulation%20Point.cpp)
+  * [Articulation Bridge](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/11%20Articulation%20Bridge.cpp)
 * ***Miscellaneous***
   * [Lowest Common Ancestor (LCA)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/09%20Lowest%20Common%20Ancestor.cpp)
 
