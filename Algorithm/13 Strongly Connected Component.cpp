@@ -1,12 +1,9 @@
 
 /**
 
-Topological Sort using DFS
-
-Note : TopSort only works with DAG
+Strongly Connected Component
 
 **/
-
 
 /** Which of the favors of your Lord will you deny ? **/
 
@@ -49,7 +46,7 @@ inline void optimizeIO()
     cin.tie(NULL);
 }
 
-const int nmax = 1e5+7;
+const int nmax = 1e3+7;
 const LL LINF = 1e17;
 
 string to_str(LL x)
@@ -64,33 +61,56 @@ string to_str(LL x)
 //
 //}
 
-vector<int>adj[nmax];
-bool visited[nmax];
+int scc_num;
+
+vector<int>graph[nmax];
+vector<int>rev_graph[nmax];
+
+int SCCMap[nmax];
+
 stack<int>stk;
 
-void dfs(int node)
+bool visited[nmax];
+
+bool flag=true;
+
+void forward_dfs(int node)
 {
     visited[node]=true;
 
-    for(int next:adj[node])
+    for(int next:graph[node])
     {
         if(!visited[next])
-            dfs(next);
+            forward_dfs(next);
     }
 
     stk.push(node);
 }
 
+void reverse_dfs(int node)
+{
+    visited[node]=true;
+    SCCMap[node]=scc_num;
+
+    for(int next:rev_graph[node])
+    {
+        if(!visited[next])
+            reverse_dfs(next);
+    }
+}
+
 void init()
 {
     for(int i=0; i<nmax; i++)
-        adj[i].clear();
+    {
+        graph[i].clear();
+        rev_graph[i].clear();
+    }
 
     fill(visited,visited+nmax,false);
 
     while(!stk.empty())
         stk.pop();
-
 }
 
 int main()
@@ -107,20 +127,43 @@ int main()
         int a,b;
         scanf("%d %d",&a,&b);
 
-        adj[a].push_back(b); /** Directed Acyclic Graph (DAG) **/
+        graph[a].push_back(b); /** Directed Acyclic Graph (DAG) **/
+        rev_graph[b].push_back(a);
     }
+
+    //cout<<"Serial "<<serial<<endl;
 
     for(int j=1; j<=nodes; j++) /** 1 based indexing **/
         if(!visited[j])
-            dfs(j);
+            forward_dfs(j);
 
-    cout<<"Topsort : ";
+    fill(visited,visited+nmax,false);
+
+    scc_num=1;
 
     while(!stk.empty())
     {
-        cout<<stk.top()<<" ";
+        int now=stk.top();
         stk.pop();
+
+        if(!visited[now])
+        {
+            reverse_dfs(now);
+            scc_num++;
+        }
     }
+
+    scc_num--;
+
+    for(int i=1;i<=scc_num;i++)
+    {
+        cout<<"SCC : "<<i<<endl;
+
+        for(int j=1;j<=nodes;j++)
+            if(SCCMap[j]==i) cout<<j<<" ";
+        cout<<endl;
+    }
+
 
     return 0;
 }
