@@ -17,6 +17,8 @@
 * ***Articulation***
   * [Articulation Point](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/10%20Articulation%20Point.cpp)
   * [Articulation Bridge](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/11%20Articulation%20Bridge.cpp)
+  * [Biconnected Components](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/14%20Biconnected%20Components.cpp)
+  * [Bridge Tree](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/15%20Bridge%20Tree.cpp)
 * ***Miscellaneous***
   * [Lowest Common Ancestor (LCA)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/09%20Lowest%20Common%20Ancestor.cpp)
   * [Topological Sort](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/12%20Topological%20Sort.cpp)
