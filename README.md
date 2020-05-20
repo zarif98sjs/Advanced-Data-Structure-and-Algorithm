@@ -1,6 +1,8 @@
 # Advanced-Data-Structure-and-Algorithm
 
-## Algorithm
+# Algorithm
+
+<h3> <b><i>Graph Theory</i></b> </h3>
 
 * ***Graph Traversal***
   * [BFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/01%20BFS.cpp)
@@ -23,9 +25,17 @@
   * [Lowest Common Ancestor (LCA)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/09%20Lowest%20Common%20Ancestor.cpp)
   * [Topological Sort](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/12%20Topological%20Sort.cpp)
   * [Strongly Connected Component (SCC)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/13%20Strongly%20Connected%20Component.cpp)
+  
+<h3> <b><i>Search Technique</i></b> </h3>
 
-## Data Structure
+ * ***Binary Search*** 
+   * [Solve Equation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/16%20Binary%20Search%20(Eqn%20Solve).cpp)
+   * [Meet In The Middle](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/17%20Binary%20Search%20(Meet%20In%20The%20Middle).cpp)
+    
 
+# Data Structure
+
+* [***Disjoint Set***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/12%20Disjoint%20Set.cpp)
 * ***Binary Indexed Tree / Fenwick Tree***
   * *1D BIT*
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/01%20BIT%20(POINT%20update%20%2C%20RANGE%20query).cpp)
@@ -43,7 +53,7 @@
 * [***Priority Queue***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/11%20Priority%20Queue%20Implementation.cpp)
 
   
-## Dynamic Programming
+# Dynamic Programming
 
 * ***LCS Variant***
   * [Longest Common Subsequence](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/01%20LCS.cpp)
