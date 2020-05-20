@@ -131,7 +131,7 @@ int main()
         adj[b].push_back(a);
     }
 
-    for(int i=1; i<=n; i++)
+    for(int i=1; i<=n; i++) /** 1 based indexing **/
     {
         if(!visited[i])
             dfs(i,-1);

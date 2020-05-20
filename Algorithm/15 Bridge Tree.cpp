@@ -180,7 +180,7 @@ int main()
         visited.assign(nmax,false);
         scc = 0;
 
-        for(int i=0; i<n; i++)
+        for(int i=1; i<=n; i++) /** 1 based indexing **/
         {
             if(!visited[i])
                 scc_dfs(i);
