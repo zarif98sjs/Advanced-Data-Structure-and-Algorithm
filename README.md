@@ -68,6 +68,7 @@
 * ***Coin Change*** 
   * [Coin Change (Minimum number of coins to make a sum)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/06%20Coin%20Change(Min%20Coin).cpp)
   * [Coin Change (Number of ways to make a sum)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/07%20Coin%20Change(Num.%20of%20Ways).cpp)
+  * [LightOj 1079 (Just Another Robbery)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/31%20Coin%20Change%20Varient%20%5BLightOj%201079%20Just%20Another%20Robbery%5D.cpp)
 * ***Matrix Variant***
   * [Largest Square Matrix with all 1's](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/11%20Largest%20Square%20Matrix%20with%20all%201.cpp)
   * [Minimum Cost Matrix Path (Top Left cell to Bottom Right cell)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/12%20Minimum%20Cost%20Matrix%20Path.cpp)
