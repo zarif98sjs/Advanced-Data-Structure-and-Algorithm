@@ -86,9 +86,14 @@
   * [Divisibility check by Digit Sum (LightOj)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/23%20Divisibility%20check%20by%20Digit%20Sum.cpp)
   * [Digit Sum (SPOJ)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/24%20Digit%20Sum.cpp)
   * [Encoding (CodeChef)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/25%20CHEF_LONG%20ENCODING.cpp)
+* ***Bitmask DP***
+  * [Bitmask DP 1 [ LightOj 1011 (Marriage Ceremonies) ]](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/27%20Bitmask%20DP%201%20%5BLightOj%201011%20Marriage%20Ceremonies%5D.cpp)
+  * [Bitmask DP 2 [ LightOj 1018 (Brush IV) ]](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/28%20Bitmask%20DP%202%20%5BLightOj%201018%20Brush%20IV%5D.cpp)
+  * [Bitmask DP 3 [ LightOj 1037 (Agent 47) ]](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/29%20Bitmask%20DP%203%20%5BLightOj%201037%20Agent%2047%5D.cpp)
+  * [Bitmask DP 4 [ LightOj 1057 (Collecting Gold) ]](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/30%20Bitmask%20DP%204%20%5BLightOj%201057%20Collecting%20Gold%5D.cpp)
 * ***Miscellaneous***
   * [N-digit binary strings without any consecutive 1’s](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/18%20Count%20N%20digit%20binary%20string%20without%20consecutive%201's.cpp)
-  
+
 
 ### Md. Zarif Ul Alam
 Computer Science & Engineering Department , BUET
