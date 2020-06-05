@@ -26,6 +26,37 @@
   * [Topological Sort](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/12%20Topological%20Sort.cpp)
   * [Strongly Connected Component (SCC)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/13%20Strongly%20Connected%20Component.cpp)
   
+<h3> <b><i>Number Theory</i></b> </h3>
+
+* ***Power & Modulus***
+  * [Power](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/18%20Power.cpp)
+  * [Big Mod](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/19%20BigMod.cpp)
+  * [Inverse Mod](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/20%20InvMod.cpp)
+* [***Extended Euclidean Algorithm***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/28%20Extended%20Euclid.cpp)
+* [***nCr***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/21%20nCr.cpp)
+* ***Sieve of Eratosthenes***
+  * [General Sieve](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/22%20Sieve%20of%20Eratosthenes.cpp)
+  * [Bit Sieve](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/23%20Bit%20Sieve.cpp)
+  * [Segmented Sieve](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/24%20Segmented%20Sieve.cpp)
+* [***Prime Factorization***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/25%20Prime%20Factorization.cpp)
+* [***Divisors***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/26%20Divisors.cpp)
+  * Number of Divisors
+  * Cumulative Sum of Number of Divisors
+  * Sum of Divisors
+  * Cumulative Sum of Sum of Divisors
+* [***Euler Totient***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/27%20Euler%20Totient.cpp)
+* ***Linear Diophantine***
+  * [2 Variable](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/29%20Linear_Diophantine.cpp)
+  * [3 Variable](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/31%20Linear%20Diophantine%20(3%20variable).cpp)
+  * [Number of solutions in a range](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/30%20Linear%20Diophantine%20(Number%20of%20solution%20in%20a%20range).cpp)
+* [***Highest Composite Number***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/32%20Highest%20Composite%20Number.cpp)
+* [***Factorials***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/33%20Factorials.cpp)
+  * Number of digits in N factorial
+  * Prime Factorization of N Factorial O(N*log(N))
+  * Find the first K digits of N!
+* [***Chinese Remainder Theorem***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/34%20Chinese%20Remainder%20Theorem.cpp)
+ 
+  
 <h3> <b><i>Search Technique</i></b> </h3>
 
  * ***Binary Search*** 
