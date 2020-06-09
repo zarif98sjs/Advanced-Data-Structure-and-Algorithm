@@ -1,7 +1,7 @@
 # GCD
 
 ## Euclid's Algorithm
-- gcd( a , b ) = gcd( b , a%b )  
+- `gcd( a , b ) = gcd( b , a%b )`  
    ### Lemma
    If a > 0 and b > 0 :
    - gcd( a , b ) = gcd( a - b , b ) [ a > b ]
