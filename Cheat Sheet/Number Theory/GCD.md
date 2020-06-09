@@ -1,5 +1,5 @@
 # GCD
-
+$$\frac{a/m}{}$$
 ## Euclid's Algorithm
 - `gcd( a , b ) = gcd( b , a%b )`  
    ### Lemma
