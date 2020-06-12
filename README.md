@@ -75,7 +75,7 @@
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/10%202D%20BIT%20(POINT%20update%2C%20RANGE%20query).cpp)
 * ***Segment Tree***
   * *Range Sum*
-    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp)
+    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp) *( Possible Variations : Range [Max , Min ,  GCD , LCM] )*
     * [Range Update , Range Query (Lazy Propagation)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/04%20Segment%20Tree%20Lazy%20Propagation%20(RANGE%20update%20%2C%20RANGE%20query).cpp)
   * *Maximum Prefix Sum & Maximum Suffix Sum & Maximum Contiguous SubArray Sum*
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/35%20Max%20Prefix_Suffix_SubArray%20Sum.cpp)
