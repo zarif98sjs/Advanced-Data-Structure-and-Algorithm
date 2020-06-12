@@ -74,8 +74,11 @@
   * *2D BIT*
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/10%202D%20BIT%20(POINT%20update%2C%20RANGE%20query).cpp)
 * ***Segment Tree***
-  * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp)
-  * [Range Update , Range Query (Lazy Propagation)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/04%20Segment%20Tree%20Lazy%20Propagation%20(RANGE%20update%20%2C%20RANGE%20query).cpp)
+  * *Range Sum*
+    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp)
+    * [Range Update , Range Query (Lazy Propagation)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/04%20Segment%20Tree%20Lazy%20Propagation%20(RANGE%20update%20%2C%20RANGE%20query).cpp)
+  * *Maximum Prefix Sum & Maximum Suffix Sum & Maximum Contiguous SubArray Sum*
+    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/35%20Max%20Prefix_Suffix_SubArray%20Sum.cpp)
 * [***Merge Sort Tree***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/05%20Merge%20Sort%20Tree.cpp)
 * [***Sweep Line Algorithm***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/06%20Sweep%20Line%20Algorithm.cpp)
 * ***Mo's Algorithm (Square Root Decomposition)***
@@ -96,6 +99,7 @@
   * [Longest Increasing Subsequence](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/05%20LIS.cpp)
   * [Longest Bitonic Subsequence](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/09%20Longest%20Bitonic%20Subsequence.cpp)
   * [Increasing Subsequence with Maximum Sum](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/10%20Increasing%20Subsequence%20with%20Maximum%20Sum.cpp)
+  * [Longest Increasing Index-Dividing Subsequence](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/32%20Longest%20increasing%20index%20dividing%20subsequence.cpp)
 * ***Coin Change*** 
   * [Coin Change (Minimum number of coins to make a sum)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/06%20Coin%20Change(Min%20Coin).cpp)
   * [Coin Change (Number of ways to make a sum)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/07%20Coin%20Change(Num.%20of%20Ways).cpp)
