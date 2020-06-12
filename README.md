@@ -74,17 +74,20 @@
   * *2D BIT*
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/10%202D%20BIT%20(POINT%20update%2C%20RANGE%20query).cpp)
 * ***Segment Tree***
-  * *Range Sum*
-    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp) *( Possible Variations : Range [Max , Min ,  GCD , LCM] )*
+  * *Range **Sum***
+    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp) *( Possible Variations : Range [**Max** , **Min** ,  **GCD** , **LCM**] )*
     * [Range Update , Range Query (Lazy Propagation)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/04%20Segment%20Tree%20Lazy%20Propagation%20(RANGE%20update%20%2C%20RANGE%20query).cpp)
-  * *Maximum Prefix Sum & Maximum Suffix Sum & Maximum Contiguous SubArray Sum*
-    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/35%20Max%20Prefix_Suffix_SubArray%20Sum.cpp)
+  * *Maximum **Prefix Sum** & Maximum **Suffix Sum** & Maximum Contiguous **SubArray Sum***
+    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/13%20Segment%20Tree%20Max%20Prefix_Suffix_SubArray%20Sum.cpp)
 * [***Merge Sort Tree***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/05%20Merge%20Sort%20Tree.cpp)
 * [***Sweep Line Algorithm***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/06%20Sweep%20Line%20Algorithm.cpp)
 * ***Mo's Algorithm (Square Root Decomposition)***
   * [Range **Sum** Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/07%20Mo's%20Algo%20(RANGE%20sum%20query).cpp)
   * [Range **Mode** (Highest Frequency) Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/09%20Mo's%20Algo%20(RANGE%20mode%20query%20Optimized).cpp)
 * [***Priority Queue***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/11%20Priority%20Queue%20Implementation.cpp)
+* ***STL***
+  * [Set](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/14%20STL%20Set.cpp)
+  * [Map](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/15%20STL%20Map.cpp)
 
   
 # Dynamic Programming
@@ -129,6 +132,11 @@
   * [Bitmask DP 4 [ LightOj 1057 (Collecting Gold) ]](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/30%20Bitmask%20DP%204%20%5BLightOj%201057%20Collecting%20Gold%5D.cpp)
 * ***Miscellaneous***
   * [N-digit binary strings without any consecutive 1’s](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Dynamic%20Programming/18%20Count%20N%20digit%20binary%20string%20without%20consecutive%201's.cpp)
+  
+# Miscellaneous
+ * ***Operator Overloading for sorting***
+   * [Using Comparator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%201).cpp)
+   * [Overloading **<** operator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%202).cpp)
 
 
 ### Md. Zarif Ul Alam
