@@ -1,22 +1,36 @@
 # GCD
-$$\frac{a/m}{}$$
+
 ## Euclid's Algorithm
-- `gcd( a , b ) = gcd( b , a%b )`
+- **`gcd( a , b ) = gcd( b , a%b )`** 
    ### Lemma
    If a > 0 and b > 0 :
-   - `gcd( a , b ) = gcd( a - b , b )` [ a > b ]
-   - `gcd( a , b ) = gcd( a , b - a )` [ b > a ]
-
+   - **`gcd( a , b ) = gcd( a - b , b )`** [ a > b ]
+   - **`gcd( a , b ) = gcd( a , b - a )`** [ b > a ]
+  
 ## Properties
-- `gcd( a , b ) * lcm( a, b ) = a * b`
-- The smallest positive integer `d` which can be written in the form  
-   `d = a*p + b*q`  
-   where `p` and `q` are integers is `gcd( a, b )`
+- _**Commutative**_ : **`gcd ( a , b ) = gcd( b , a )`** 
+- _**Associative**_ : **`gcd( a , gcd(b,c) ) = gcd( gcd(a,b) , c)`**  
+- _**Distributive**_ :   
+  1 . `gcd( a , lcm(b,c) ) = lcm( gcd(a,b) , gcd(a,c) )`  
+  2 . `lcm( a , gcd(b,c) ) = gcd( lcm(a,b) , lcm(a,c) )` 
+- _**GCD LCM Formula**_ : **`gcd( a , b ) * lcm( a, b ) = a * b`**
+- _**Bézout's identity**_ :  
+  The smallest positive integer `d` which can be written in the form  
+   **`d = a*p + b*q`**  
+   where `p` and `q` are integers is `gcd( a, b )` 
    The expression is called **Bézout's identity**
+- _**Lemma :**_  
+  1 . `gcd( lcm(n1,M) , lcm(n2,M) ... lcm(nk,M) ) = lcm( gcd(n1,n2, ... nk) , M )`  
+  2 . `lcm( gcd(n1,M) , gcd(n2,M) ... gcd(nk,M) ) = gcd( lcm(n1,n2, ... nk) , M )`  
 - If `m` is a _non-negative_ integer  
-  `gcd( m*a , m*b ) = m * gcd( a , b )`
+  **`gcd( m*a , m*b ) = m * gcd( a , b )`**
 - If `m` is _any_ integer  
-  `gcd( a+m*b , b ) = gcd( a , b )`
+  **`gcd( a+m*b , b ) = gcd( a , b )`**
 - If `m` is a positive common divisor of `a` and `b`  
-  `gcd( a/m , b/m ) = gcd( a , b ) / m `  
-  $\frac{a/m}{}$
+  **`gcd( a/m , b/m ) = gcd( a , b ) / m `**
+- If `a1` & `a2` are relatively prime   
+  `gcd( a1*a2 , b ) = gcd( a1 , b ) * gcd( a2 , b )`  
+
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>

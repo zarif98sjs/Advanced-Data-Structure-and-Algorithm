@@ -1,3 +1,6 @@
+
+https://dillinger.io/
+
 # GCD
 
 ## Euclid's Algorithm
@@ -19,11 +22,17 @@
   `gcd( a+m*b , b ) = gcd( a , b )`
 - If `m` is a positive common divisor of `a` and `b`  
   `gcd( a/m , b/m ) = gcd( a , b ) / m `  
-  $\frac{a}{m}$
+
+  $\frac{a}{m}$  
   ```
   $\frac{a}{m}$
   ```
-  $\frac{a/m}{b/m}$
+  $\frac{a/m}{b/m}$  
 
   $$\sum_{d|n} i^2$$
    $\sum_{d|n} i^2$
+
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });
+    </script>
