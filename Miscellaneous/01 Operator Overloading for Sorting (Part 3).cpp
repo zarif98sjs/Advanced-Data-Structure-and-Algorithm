@@ -86,36 +86,22 @@ bool operator<(const Node &A,const Node &B) /** Operator overloaded with Ascendi
     return A.cost<B.cost;
 }
 
+bool operator>(const Node &A,const Node &B) /** Operator overloaded with Descending order of cost **/
+{
+    if(A.cost==B.cost)
+        return A.name<B.name;
+
+    return A.cost>B.cost;
+}
+
 int main()
 {
     optimizeIO();
 
-    vector<Node>v;
-
-    v.push_back(Node(1,100,"C"));
-    v.push_back(Node(1,100,"A"));
-    v.push_back(Node(1,100,"B"));
-    v.push_back(Node(1,500,"AB"));
-    v.push_back(Node(1,50,"ABC"));
-
-    cout<<v<<endl;
-
-    sort(ALL(v)); /** Uses the overloaded < operator **/
-
-    cout<<v<<endl;
-
-    set<Node>st; /** Uses the overloaded < operator **/
-    st.insert(Node(1,100,"C"));
-    st.insert(Node(1,100,"A"));
-    st.insert(Node(1,100,"B"));
-    st.insert(Node(1,500,"AB"));
-    st.insert(Node(1,50,"ABC"));
-    cout<<st<<endl;
-
     /**
 
     PRIORITY QUEUE is MAX HEAP by default .
-    So , uses overloaded < operator and the result will be opposite of what we got in SET .
+    So , uses overloaded < operator and the result will be opposite of what we got in set .
 
     **/
 
@@ -128,6 +114,24 @@ int main()
 
     while(!pq.empty())
         cout<<pq.top()<<" " , pq.pop();
+    cout<<endl;
+
+    /**
+
+    As " greater<Node> " is used ,
+    PRIORITY QUEUE will use > operator for determining priority
+
+    **/
+
+    priority_queue<Node, vector<Node>, greater<Node> > pq2;
+    pq2.push(Node(1,100,"C"));
+    pq2.push(Node(1,100,"A"));
+    pq2.push(Node(1,100,"B"));
+    pq2.push(Node(1,500,"AB"));
+    pq2.push(Node(1,50,"ABC"));
+
+    while(!pq2.empty())
+        cout<<pq2.top()<<" " , pq2.pop();
     cout<<endl;
 
     return 0;
