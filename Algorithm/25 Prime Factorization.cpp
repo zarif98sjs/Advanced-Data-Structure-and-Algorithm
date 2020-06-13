@@ -1,4 +1,16 @@
 
+/**
+
+Prime Factorization by finding all primes
+-----------------------------------------
+
+There are roughly N/log(N) primes <= N
+
+As we need only prime factors upto sqrt(N) to prime factorize ,
+Complexity of prime factorization will be O( (sqrt(N)/log(sqrt(N)) * log(N) )
+
+**/
+
 /** Which of the favors of your Lord will you deny ? **/
 
 #include<bits/stdc++.h>

@@ -1,10 +1,12 @@
 
 /**
 
-Overloading > operator
-======================
+Prime Factorization by finding smallest prime factor
+----------------------------------------------------
 
-Needed for Min Heap Priority Queue / whenever "greater" is used as it will use > operator to determine which is greater
+Modify sieve to find SPF
+
+Complexity : O(logN)
 
 **/
 
@@ -33,14 +35,12 @@ using namespace __gnu_pbds;
 template<class TIn>using indexed_set = tree<TIn, null_type, less<TIn>,rb_tree_tag, tree_order_statistics_node_update>;
 
 /**
-
 PBDS
 -------------------------------------------------
 1) insert(value)
 2) erase(value)
 3) order_of_key(value) // 0 based indexing
 4) *find_by_order(position) // 0 based indexing
-
 **/
 
 template<class T1, class T2>
@@ -67,87 +67,70 @@ string to_str(T x)
     return ss.str();
 }
 
-class Node
-{
-public:
-    int id, cost;
-    string name;
+//bool cmp(const PII &A,const PII &B)
+//{
+//
+//}
 
-    Node(int id,int cost,string name)
+/** Bit Sieve **/
+
+const int pnmax = 1e7+7;
+LL LIM;
+bitset<pnmax> bs;   /// can sieve upto 1e8 in ~ 1 sec
+int spf[pnmax];
+
+void bit_sieve(LL upperbound)
+{
+    LIM = upperbound + 1;
+    bs.set();                                     /// set all bits to 1
+    bs[0] = bs[1] = 0;
+    for (LL i = 2; i <= LIM; i++) /** If I don't want to know the primes , it is enough to loop upto sqrt(LIM) here **/
+        if (bs[i])
+        {
+            for (LL j = i * i; j <= LIM; j += i)
+                bs[j] = 0 , spf[j] = i;
+            spf[i] = i;
+        }
+}
+
+/** Prime Factorization **/
+
+vector<LL> primeFactors(LL N)
+{
+    vector<LL>factors;
+
+    while(N>1)
     {
-        this->id = id;
-        this->cost = cost;
-        this->name = name;
+        LL sml = spf[N];
+
+        while(N%sml==0)
+        {
+            factors.push_back(sml);
+            N/=sml;
+        }
     }
-};
 
-ostream &operator <<(ostream &os, Node const&node)
-{
-    os<<"Id : "<<node.id<<" , Cost : "<<node.cost<<" , Name : "<<node.name;
-    return os;
-}
-
-bool operator<(const Node &A,const Node &B) /** Operator overloaded with Ascending order of cost **/
-{
-    if(A.cost==B.cost)
-        return A.name<B.name;
-
-    return A.cost<B.cost;
-}
-
-bool operator>(const Node &A,const Node &B) /** Operator overloaded with Descending order of cost **/
-{
-    if(A.cost==B.cost)
-        return A.name<B.name;
-
-    return A.cost>B.cost;
+    return factors;
 }
 
 int main()
 {
     optimizeIO();
 
-    /**
+    bit_sieve(1e6);
 
-    PRIORITY QUEUE is MAX HEAP by default .
-    So , uses overloaded < operator and the result will be opposite of what we got in set .
-
-    **/
-
-    priority_queue<Node>pq;
-    pq.push(Node(1,100,"C"));
-    pq.push(Node(1,100,"A"));
-    pq.push(Node(1,100,"B"));
-    pq.push(Node(1,500,"AB"));
-    pq.push(Node(1,50,"ABC"));
-
-    while(!pq.empty())
-        cout<<pq.top()<<" " , pq.pop();
-    cout<<endl;
-
-    /**
-
-    As " greater<Node> " is used ,
-    PRIORITY QUEUE will use > operator for determining priority
-
-    **/
-
-    priority_queue<Node, vector<Node>, greater<Node> > pq2;
-    pq2.push(Node(1,100,"C"));
-    pq2.push(Node(1,100,"A"));
-    pq2.push(Node(1,100,"B"));
-    pq2.push(Node(1,500,"AB"));
-    pq2.push(Node(1,50,"ABC"));
-
-    while(!pq2.empty())
-        cout<<pq2.top()<<" " , pq2.pop();
-    cout<<endl;
+    while(1)
+    {
+        LL x;
+        cin>>x;
+        vector<LL>pf = primeFactors(x);
+        cout<<pf<<endl;
+    }
 
     return 0;
 }
 
 /**
-
 **/
 
 template<class T1, class T2>
@@ -179,5 +162,3 @@ ostream &operator <<(ostream &os, set<T>&v)
     os<<" ]";
     return os;
 }
-
-
