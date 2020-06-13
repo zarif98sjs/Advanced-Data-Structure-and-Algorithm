@@ -35,9 +35,9 @@
 * [***Extended Euclidean Algorithm***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/28%20Extended%20Euclid.cpp)
 * [***nCr***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/21%20nCr.cpp)
 * ***Sieve of Eratosthenes***
-  * [General Sieve](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/22%20Sieve%20of%20Eratosthenes.cpp)
-  * [Bit Sieve](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/23%20Bit%20Sieve.cpp)
-  * [Segmented Sieve](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/24%20Segmented%20Sieve.cpp)
+  * [General Sieve](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/22%20Sieve%20of%20Eratosthenes.cpp) : **O( N log(logN) )** , *Memory* : **O(N)**
+  * [Bit Sieve](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/23%20Bit%20Sieve.cpp) : **O( N log(logN) )** , *Memory* : **N bit**
+  * [Segmented Sieve](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/24%20Segmented%20Sieve.cpp) : **O( (R-L+1) log(logR) + sqrt(R) log(log(sqrt(R))) )** , *Memory* : **O(R-L+1)**
 * ***Prime Factorization***
   * [Using all primes](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/25%20Prime%20Factorization.cpp) : **O( (sqrt(N)/log(sqrt(N)) * logN )**
   * [Using only smallest prime factor](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/35%20Prime%20Factorization%20using%20SPF.cpp) : **O(logN)**
