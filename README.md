@@ -38,7 +38,9 @@
   * [General Sieve](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/22%20Sieve%20of%20Eratosthenes.cpp)
   * [Bit Sieve](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/23%20Bit%20Sieve.cpp)
   * [Segmented Sieve](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/24%20Segmented%20Sieve.cpp)
-* [***Prime Factorization***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/25%20Prime%20Factorization.cpp)
+* ***Prime Factorization***
+  * [Using all primes](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/25%20Prime%20Factorization.cpp) : **O( (sqrt(N)/log(sqrt(N)) * logN )**
+  * [Using only smallest prime factor](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/35%20Prime%20Factorization%20using%20SPF.cpp) : **O(logN)**
 * [***Divisors***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/26%20Divisors.cpp)
   * Number of Divisors
   * Cumulative Sum of Number of Divisors
