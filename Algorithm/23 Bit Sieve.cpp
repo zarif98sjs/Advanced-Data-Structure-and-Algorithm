@@ -1,4 +1,14 @@
 
+/**
+
+Bit Sieve
+=========
+
+Time Complexity : O( N log(logN) )
+Memory Complexity : N bit
+
+**/
+
 /** Which of the favors of your Lord will you deny ? **/
 
 #include<bits/stdc++.h>

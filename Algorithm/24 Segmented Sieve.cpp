@@ -1,4 +1,17 @@
 
+/**
+
+Segmented Sieve
+===============
+
+Precalculating primes : O( sqrt(R) log(log(sqrt(R))) )
+Later segmented sieve : O( (R-L+1) log(logR) )
+
+So,
+Time Complexity : O( (R-L+1) log(logR) + sqrt(R) log(log(sqrt(R))) )
+
+**/
+
 /** Which of the favors of your Lord will you deny ? **/
 
 #include<bits/stdc++.h>
@@ -67,17 +80,17 @@ string to_str(T x)
 
 Segmented Sieve
 
-Range of [A,B] ~ 10^5
+Range of [L,R] ~ 10^5
 
 **/
 
-const int pnmax = 1e6+10;
-const int pnmax2 = 1e5+10; /** diff of B and A **/
+const int pnmax = 1e6+10;  /** ~ sqrt(R) **/
+const int pnmax2 = 1e5+10; /** diff of R and L **/
 
-LL LIM = 1e6+5;
+LL LIM = 1e6+5; /** ~ sqrt(R) **/
 vector<LL>primes;
-bool isP[nmax];
-bool isPFinal[nmax2];
+bool isP[pnmax];
+bool isPFinal[pnmax2];
 
 void sieve()
 {
@@ -95,9 +108,9 @@ void sieve()
     }
 }
 
-void segmented_sieve(LL A ,LL B)
+void segmented_sieve(LL L ,LL R)
 {
-    for(LL i=0; i<=nmax2; i++)
+    for(LL i=0; i<=pnmax2; i++)
         isPFinal[i]=true;
 
     for(LL i=0;i<primes.size();i++)
@@ -105,21 +118,21 @@ void segmented_sieve(LL A ,LL B)
         LL p=primes[i];
         LL j=p*p;
 
-        if(j<A)
-            j=((A+p-1)/p)*p;
+        if(j<L)
+            j=((L+p-1)/p)*p;
 
-        for(;j<=B;j+=p)
-            isPFinal[j-A]=false;
+        for(;j<=R;j+=p)
+            isPFinal[j-L]=false;
 
     }
 
     /** print **/
-    for(LL i=A;i<=B;i++)
+    for(LL i=L;i<=R;i++)
     {
         if(i==1LL)
             continue;
 
-        if(isPFinal[i-A])
+        if(isPFinal[i-L])
             cout<<i<<endl;
     }
 }

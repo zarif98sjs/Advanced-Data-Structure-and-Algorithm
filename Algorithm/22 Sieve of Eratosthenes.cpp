@@ -1,4 +1,14 @@
 
+/**
+
+Sieve of Eratosthenes
+=====================
+
+Time Complexity : O( N log(logN) )
+Memory Complexity : O( N )
+
+**/
+
 /** Which of the favors of your Lord will you deny ? **/
 
 #include<bits/stdc++.h>
