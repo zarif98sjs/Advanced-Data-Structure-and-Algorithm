@@ -4,6 +4,9 @@
 Segmented Sieve
 ===============
 
+Range of [L,R] ~ 1e7 and R ~ 1e12
+---------------------------------
+
 Precalculating primes : O( sqrt(R) log(log(sqrt(R))) )
 Later segmented sieve : O( (R-L+1) log(logR) )
 
@@ -80,7 +83,7 @@ string to_str(T x)
 
 Segmented Sieve
 
-Range of [L,R] ~ 10^5
+Range of [L,R] ~ 1e7 and R ~ 1e12
 
 **/
 

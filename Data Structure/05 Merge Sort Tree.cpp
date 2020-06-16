@@ -2,12 +2,64 @@
 /**
 
 PROBLEM : Array of N integers
-          Query(l,r,k) : number of integers less than k in the range [l,r]
+          Query(l,r,k) : number of integers < k in the range [l,r]
 
 
-DATA STRUCTURE : MERGE SORT TREE
+Query Modifications
+===================
 
-RESOURCE : https://www.commonlounge.com/discussion/d871499b49e443259cfbea9b16f9b958
+Type 1 : number of integers >= OR <= in a range
+======
+
+( Mod 0 ) number of integers less < k in the range [l,r]  : lower_bound(ALL(Tree[cur].v),k) - Tree[cur].v.begin();
+
+0 1 2 ... k-1 k k+1...
+--------------^-------
+
+( Mod 1 ) number of integers less <= k in the range [l,r] : upper_bound(ALL(Tree[cur].v),k) - Tree[cur].v.begin();
+
+0 1 2 ... k-1 k k k k k k  k+1...
+----------------------------^----
+
+(Mod 2 ) number of integers x such that ( a <= x <= b )  : upper_bound(ALL(Tree[cur].v),b) - lower_bound(ALL(Tree[cur].v),a);
+
+0 1 2 ... a a a a a a ..... b b b b b b+1...
+----------^----------------------------^----
+
+Type 2 : smallest number greater or equal to a specified number k
+======
+
+if(end<l || start>r)
+        return INT_MAX;
+-----------------------
+auto pos = lower_bound(ALL(Tree[cur].v),k)
+if(pos != Tree[cur].v.end())
+    return *pos;
+return INF;
+------------------------
+return min(p1,p2);
+
+
+
+=========================================================================================================================
+
+DATA STRUCTURE
+--------------
+MERGE SORT TREE
+
+Complexity
+----------
+
+Build   :   O( NlogN )
+Query   :   O( (logN)^2 )
+
+Memory  :   O( NlogN )
+
+
+RESOURCE
+--------
+1) https://www.commonlounge.com/discussion/d871499b49e443259cfbea9b16f9b958
+2) https://cp-algorithms.com/data_structures/segment_tree.html
 
 **/
 
@@ -37,7 +89,8 @@ using indexed_set = tree<
                     TIn, null_type, less<TIn>,
                     rb_tree_tag, tree_order_statistics_node_update>;
 
-/*
+/**
+
 PBDS
 -------------------------------------------------
 1) insert(value)
@@ -45,7 +98,7 @@ PBDS
 3) order_of_key(value) // 0 based indexing
 4) *find_by_order(position) // 0 based indexing
 
-*/
+**/
 
 inline void optimizeIO()
 {
