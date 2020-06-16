@@ -81,7 +81,9 @@
     * [Range Update , Range Query (Lazy Propagation)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/04%20Segment%20Tree%20Lazy%20Propagation%20(RANGE%20update%20%2C%20RANGE%20query).cpp)
   * *Maximum **Prefix Sum** & Maximum **Suffix Sum** & Maximum Contiguous **SubArray Sum***
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/13%20Segment%20Tree%20Max%20Prefix_Suffix_SubArray%20Sum.cpp)
-* [***Merge Sort Tree***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/05%20Merge%20Sort%20Tree.cpp)
+* ***Merge Sort Tree***
+  * [Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/05%20Merge%20Sort%20Tree.cpp)
+  * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/19%20Merge%20Sort%20Tree%202.cpp)
 * [***Sweep Line Algorithm***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/06%20Sweep%20Line%20Algorithm.cpp)
 * ***Mo's Algorithm (Square Root Decomposition)***
   * [Range **Sum** Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/07%20Mo's%20Algo%20(RANGE%20sum%20query).cpp)
