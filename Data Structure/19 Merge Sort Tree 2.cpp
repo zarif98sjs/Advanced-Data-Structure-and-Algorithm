@@ -85,9 +85,9 @@ using namespace std;
 using namespace __gnu_pbds;
 
 template<class TIn>
-using indexed_set = tree<
-                    TIn, null_type, less<TIn>,
-                    rb_tree_tag, tree_order_statistics_node_update>;
+using indexed_multiset = tree<
+                         pair<TIn,TIn>, null_type, less< pair<TIn,TIn> >,
+                         rb_tree_tag, tree_order_statistics_node_update>;
 
 /**
 
@@ -127,16 +127,19 @@ int ara[nmax];
 
 struct node
 {
-    vector<int>v;
+    indexed_multiset<int> MS;
 
-    void create_leaf(int val)
+    void create_leaf(int val,int id)
     {
-        v.push_back(val);
+        MS.insert({val,id});
     }
 
     void merge_nodes(node &A,node &B)
     {
-        merge(ALL(A.v),ALL(B.v),back_inserter(v));
+        for(auto x:A.MS)
+            MS.insert(x);
+        for(auto x:B.MS)
+            MS.insert(x);
     }
 
 };
@@ -148,7 +151,7 @@ void build(int cur,int start,int end) /** build the segment tree **/
 {
     if(start==end)
     {
-        Tree[cur].create_leaf(ara[start]);
+        Tree[cur].create_leaf(ara[start],start);
         return;
     }
 
@@ -169,7 +172,7 @@ int query(int cur,int start,int end,int l,int r,int k) /** RANGE query **/
 
     if(start>=l && end<=r)
     {
-        return lower_bound(ALL(Tree[cur].v),k) - Tree[cur].v.begin();
+        return Tree[cur].MS.order_of_key({k,0});
     }
 
     int mid = (start+end)>>1;
@@ -181,6 +184,28 @@ int query(int cur,int start,int end,int l,int r,int k) /** RANGE query **/
     return p1 + p2;
 }
 
+void update(int cur,int start,int end,int id,int val)
+{
+    Tree[cur].MS.erase(Tree[cur].MS.lower_bound({ara[id],0}));
+    Tree[cur].MS.insert({val,id});
+
+    if(start==end)
+    {
+        ara[id] = val;
+    }
+    else
+    {
+        int mid = (start + end)>>1;
+        int lc = cur<<1, rc = lc|1;
+
+        if (id <= mid)
+            update(lc, start, mid, id, val);
+        else
+            update(rc, mid+1, end, id, val);
+    }
+
+}
+
 int main()
 {
     optimizeIO();
@@ -188,7 +213,7 @@ int main()
     int n,q;
     cin>>n>>q;
 
-    for(int i=1;i<=n;i++)
+    for(int i=1; i<=n; i++)
     {
         cin>>ara[i];
     }
@@ -197,14 +222,61 @@ int main()
 
     while(q--)
     {
-        int l,r,k;
-        cin>>l>>r>>k;
+        int type,l,r,k ,id,val;
+        cin>>type;
 
-        cout<<query(1,1,n,l,r,k)<<"\n";
-
+        if(type==1)
+        {
+            cin>>l>>r>>k;
+            cout<<query(1,1,n,l,r,k)<<"\n";
+        }
+        else
+        {
+            cin>>id>>val;
+            update(1,1,n,id,val);
+        }
     }
 
     return 0;
 }
+
+/**
+
+12 14
+
+1 2 3 1 1 3 3 2 2 4 4 4
+
+1 1 5 2
+2 4 2
+1 1 5 2
+1 1 5 1
+1 1 5 3
+2 1 5
+1 1 5 3
+1 1 5 4
+1 3 10 3
+1 5 11 2
+1 2 8 1
+1 4 6 4
+1 5 6 2
+1 1 12 3
+
+Output:
+
+3
+2
+0
+4
+3
+4
+4
+1
+0
+3
+1
+5
+
+
+**/
 
 
