@@ -5,7 +5,9 @@
 <h3> <b><i>Graph Theory</i></b> </h3>
 
 * ***Graph Traversal***
-  * [BFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/01%20BFS.cpp)
+  * BFS
+    * [Single Source BFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/01%20BFS.cpp)
+    * [Multi Source BFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/37%20Multisource%20BFS.cpp)
   * [DFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/02%20DFS.cpp)
 * ***Single Source Shortest Path (SSSP)***
   * [Dijkstra](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/03%20Dijkstra%20%5BSingle%20Source%20Shortest%20Path%5D.cpp)
@@ -41,11 +43,13 @@
 * ***Prime Factorization***
   * [Using all primes](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/25%20Prime%20Factorization.cpp) : **O( (sqrt(N)/log(sqrt(N)) * logN )**
   * [Using only smallest prime factor](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/35%20Prime%20Factorization%20using%20SPF.cpp) : **O(logN)**
-* [***Divisors***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/26%20Divisors.cpp)
-  * Number of Divisors
-  * Cumulative Sum of Number of Divisors
-  * Sum of Divisors
-  * Cumulative Sum of Sum of Divisors
+* ***Divisors***
+  * [Number of Divisors](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/26%20Divisors.cpp)
+  * [Cumulative Sum of Number of Divisors](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/26%20Divisors.cpp)
+  * [Sum of Divisors](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/26%20Divisors.cpp)
+  * [Cumulative Sum of Sum of Divisors](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/26%20Divisors.cpp)
+  * [All Prime Divisors](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/36%20Find%20All%20Prime%20Divisors%20of%20N.cpp) 
+    : **O( sqrt (N) )**
 * [***Euler Totient***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/27%20Euler%20Totient.cpp)
 * ***Linear Diophantine***
   * [2 Variable](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/29%20Linear_Diophantine.cpp)
