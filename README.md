@@ -8,7 +8,12 @@
   * BFS
     * [Single Source BFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/01%20BFS.cpp)
     * [Multi Source BFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/37%20Multisource%20BFS.cpp)
-  * [DFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/02%20DFS.cpp)
+  * DFS
+    * [Simple DFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/02%20DFS.cpp)
+    * [Cycle Check ***(Undirected Graph)***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/40%20Cycle%20Check.cpp)
+    * [Cycle Check ***(Directed Graph)***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/41%20Cycle%20Check%20Directed.cpp)
+    * [Bipartite / Bicolorable / Odd Cycle existence check](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/39%20Bipartite%20check.cpp)
+    * [Subtree Size](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/38%20Subtree%20Size.cpp)
 * ***Single Source Shortest Path (SSSP)***
   * [Dijkstra](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/03%20Dijkstra%20%5BSingle%20Source%20Shortest%20Path%5D.cpp)
   * [Bellman Ford](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/04%20Bellman%20Ford%20%5BSingle%20Source%20Shortest%20Path%5D.cpp)
