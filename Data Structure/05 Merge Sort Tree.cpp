@@ -50,8 +50,9 @@ MERGE SORT TREE
 Complexity
 ----------
 
-Build   :   O( NlogN )
+Build   :   O( N (logN)^2 )
 Query   :   O( (logN)^2 )
+Update  :   O( (logN)^2 )
 
 Memory  :   O( NlogN )
 
