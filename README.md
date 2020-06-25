@@ -71,6 +71,7 @@
 <h3> <b><i>Search Technique</i></b> </h3>
 
  * ***Binary Search*** 
+   * [*lower_bound* , *upper_bound* implementation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/42%20Binary%20Search.cpp)
    * [Solve Equation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/16%20Binary%20Search%20(Eqn%20Solve).cpp)
    * [Meet In The Middle](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/17%20Binary%20Search%20(Meet%20In%20The%20Middle).cpp)
     
@@ -80,8 +81,11 @@
 * [***Disjoint Set***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/12%20Disjoint%20Set.cpp)
 * ***Binary Indexed Tree / Fenwick Tree***
   * *1D BIT*
-    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/01%20BIT%20(POINT%20update%20%2C%20RANGE%20query).cpp)
-    * [Range Update , Point Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/02%20BIT%20(RANGE%20update%20%2C%20POINT%20query).cpp)
+    * [Point Update , Range Query , ***lower_bound*** , ***upper_bound*** ](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/01%20BIT%20(POINT%20update%20%2C%20RANGE%20query).cpp)  
+    update , query : **O(logN)**   
+    ***lower_bound*** , ***upper_bound*** : *binary search* - **O( (logN)^2 )**  , *binary lifting* - **O(logN)**
+    * [Range Update , Point Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/02%20BIT%20(RANGE%20update%20%2C%20POINT%20query).cpp)  
+    update , query : **O(logN)**   
   * *2D BIT*
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/10%202D%20BIT%20(POINT%20update%2C%20RANGE%20query).cpp)
 * ***Segment Tree***
