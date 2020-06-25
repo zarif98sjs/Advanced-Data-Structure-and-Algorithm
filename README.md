@@ -82,21 +82,29 @@
 * ***Binary Indexed Tree / Fenwick Tree***
   * *1D BIT*
     * [Point Update , Range Query , ***lower_bound*** , ***upper_bound*** ](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/01%20BIT%20(POINT%20update%20%2C%20RANGE%20query).cpp)  
-    update , query : **O(logN)**   
+    *update* , *query* : **O(logN)**   
     ***lower_bound*** , ***upper_bound*** : *binary search* - **O( (logN)^2 )**  , *binary lifting* - **O(logN)**
     * [Range Update , Point Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/02%20BIT%20(RANGE%20update%20%2C%20POINT%20query).cpp)  
-    update , query : **O(logN)**   
+    *update* , *query* : **O(logN)**   
   * *2D BIT*
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/10%202D%20BIT%20(POINT%20update%2C%20RANGE%20query).cpp)
 * ***Segment Tree***
   * *Range **Sum***
-    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp) *( Possible Variations : Range [**Max** , **Min** ,  **GCD** , **LCM**] )*
+    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp) *( Possible Variations : Range [ **Multiplication , Min , Max , GCD , LCM , and , or , xor** ] )*  
+    *build* : **O(n)**  
+    *update* , *query* : **O(logN)** 
     * [Range Update , Range Query (Lazy Propagation)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/04%20Segment%20Tree%20Lazy%20Propagation%20(RANGE%20update%20%2C%20RANGE%20query).cpp)
   * *Maximum **Prefix Sum** & Maximum **Suffix Sum** & Maximum Contiguous **SubArray Sum***
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/13%20Segment%20Tree%20Max%20Prefix_Suffix_SubArray%20Sum.cpp)
 * ***Merge Sort Tree***
-  * [Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/05%20Merge%20Sort%20Tree.cpp)
-  * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/19%20Merge%20Sort%20Tree%202.cpp)
+  * [Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/05%20Merge%20Sort%20Tree.cpp)  
+  *build* : **O( NlogN )**  
+  *query* : **O( (logN)^2 )**  
+  *memory* :   **O( NlogN )**
+  * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/19%20Merge%20Sort%20Tree%202.cpp)  
+  *build* : **O( N (logN)^2 )**  
+  *update* , *query* : **O( (logN)^2 )**  
+  *memory* :   **O( NlogN )**
 * [***Sweep Line Algorithm***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/06%20Sweep%20Line%20Algorithm.cpp)
 * ***Mo's Algorithm (Square Root Decomposition)***
   * [Range **Sum** Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/07%20Mo's%20Algo%20(RANGE%20sum%20query).cpp)
