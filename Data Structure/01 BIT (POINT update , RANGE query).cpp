@@ -55,13 +55,13 @@ string to_str(LL x)
 //
 //}
 
-int ara[nmax];
+LL ara[nmax];
 
 /** BIT / FENWICK TREE **/
 /*** 1 based indexing ***/
 
 LL BIT[nmax];
-void update(int index,int val,int len) /** POINT update , adds to the current value **/
+void update(int index,LL val,int len) /** POINT update , adds to the current value **/
 {
     while(index<=len)
     {
@@ -79,6 +79,67 @@ LL query(int index) /** RANGE query **/
         index -= index&(-index);
     }
     return sum;
+}
+
+
+///===================================================================================\\\
+
+
+/** binary search on BIT : lower_bound and upper_bound **/
+
+/// for 1 based indexing with n elements , set lo = 1 , hi = n+1
+
+int lowerBound_BIT(int lo,int hi,int key) /** O( (logN)^2 ) **/
+{
+    while(lo!=hi)
+    {
+        int mid = lo + (hi-lo)/2;
+
+        if(query(mid)<key) lo = mid + 1;
+        else hi = mid;
+    }
+
+    return lo;
+}
+
+int upperBound_BIT(int lo,int hi,int key) /** O( (logN)^2 ) **/
+{
+    while(lo!=hi)
+    {
+        int mid = lo + (hi-lo)/2;
+
+        if(query(mid)<=key) lo = mid + 1;
+        else hi = mid;
+    }
+
+    return lo;
+}
+
+/** binary search on BIT : lower_bound and upper_bound [OPTIMIZED] using Binary Lifting **/
+
+int lowerBound_BIT_efficient(LL v,int N) /** O( logN ) **/
+{
+	LL sum = 0;
+	LL pos = 0;
+
+	int k = 0;
+    while (1 << (k + 1) <= N)
+        k++;
+
+    /** k = log(N) **/
+
+	for(int i=k; i>=0; i--)
+	{
+	    int next_idx = pos + (1 << i);
+
+		if( next_idx < N && sum + BIT[next_idx] < v) /// For upper_bound change to "BIT[next_idx] < v" to "BIT[next_idx] <= v"
+		{
+			sum += BIT[next_idx];
+			pos = next_idx;
+		}
+	}
+
+	return pos + 1; /// +1 because 'pos' will have position of largest value less than 'v'
 }
 
 int main()
