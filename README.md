@@ -90,7 +90,8 @@
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/10%202D%20BIT%20(POINT%20update%2C%20RANGE%20query).cpp)
 * ***Segment Tree***
   * *Range **Sum***
-    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp) *( Possible Variations : Range [ **Multiplication , Min , Max , GCD , LCM , and , or , xor** ] )*  
+    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp)  
+    *( Possible Variations : Range [ **Multiplication , Min , Max , GCD , LCM , and , or , xor** ] )*  
     *build* : **O(n)**  
     *update* , *query* : **O(logN)** 
     * [Range Update , Range Query (Lazy Propagation)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/04%20Segment%20Tree%20Lazy%20Propagation%20(RANGE%20update%20%2C%20RANGE%20query).cpp)
@@ -109,6 +110,11 @@
 * ***Mo's Algorithm (Square Root Decomposition)***
   * [Range **Sum** Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/07%20Mo's%20Algo%20(RANGE%20sum%20query).cpp)
   * [Range **Mode** (Highest Frequency) Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/09%20Mo's%20Algo%20(RANGE%20mode%20query%20Optimized).cpp)
+* ***Suffix Array***
+  * [**O( N^2 logN )**](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/20%20Suffix%20Array%201.cpp)
+  * [**O( N (logN)^2 )**](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/21%20Suffix%20Array%202.cpp)
+  * [**O( NlogN )**](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/22%20Suffix%20Array%203.cpp)
+  * [**O( NlogN )** *optimized*](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/23%20Suffix%20Array%204.cpp)
 * [***Priority Queue***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/11%20Priority%20Queue%20Implementation.cpp)
 * ***STL***
   * [Set](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/14%20STL%20Set.cpp)
