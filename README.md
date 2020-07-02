@@ -68,6 +68,13 @@
 * [***Chinese Remainder Theorem***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/34%20Chinese%20Remainder%20Theorem.cpp)
  
   
+<h3> <b><i>String</i></b> </h3>
+
+ * [***Suffix Array***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/23%20Suffix%20Array%204.cpp) : **O( NlogN )**
+ * [***Longest Common Prefix (LCP) Array Construction***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/43%20Longest%20Common%20Prefix.cpp) : **O(N)**
+ * [***Prefix Function (KMP ALgorithm)***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/44%20Prefix%20Function%20KMP.cpp) : **O(N)**
+  
+  
 <h3> <b><i>Search Technique</i></b> </h3>
 
  * ***Binary Search*** 
