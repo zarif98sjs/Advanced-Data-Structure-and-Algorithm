@@ -1,23 +1,4 @@
 
-/**
-
-KMP
-
-Idea :
-
-Let , s  = acbabab
-and   rs = bababca (reverse of string s)
-
-How can we make Palindrome of shortest length ?
-
- acbabab
- --bababca
-
-So ,  We need to know the Longest Prefix of rs in s .
-We can do that using Prefix Function , KMP .
-
-**/
-
 /** Which of the favors of your Lord will you deny ? **/
 
 #include<bits/stdc++.h>
@@ -29,9 +10,10 @@ using namespace std;
 #define MP make_pair
 #define F first
 #define S second
+#define INF INT_MAX
 
 #define ALL(x) (x).begin(), (x).end()
-#define DBG(x) cout << __LINE__ << " says: " << #x << " = " << (x) << endl
+#define DBG(x) cerr << __LINE__ << " says: " << #x << " = " << (x) << endl
 #define READ        freopen("alu.txt", "r", stdin)
 #define WRITE       freopen("vorta.txt", "w", stdout)
 
@@ -81,53 +63,24 @@ string to_str(T x)
 //
 //}
 
-vector<int> prefix_function(string s) {
-    int n = (int)s.length();
-    vector<int> pi(n);
-    for (int i = 1; i < n; i++) {
-        int j = pi[i-1];
-        while (j > 0 && s[i] != s[j])
-            j = pi[j-1];
-        if (s[i] == s[j])
-            j++;
-        pi[i] = j;
-    }
-    return pi;
-}
-
-int minimumPalindromeLength(string s)
-{
-    int sz = s.size();
-    string rs = s;
-    reverse(ALL(rs));
-
-    vector<int>pi = prefix_function(rs+"#"+s);
-    int psz = pi.size();
-
-    int maximum_match = pi[psz-1];
-
-    int ans = sz + (sz-maximum_match);
-    return ans;
-}
-
 int main()
 {
+    //freopen("out.txt","w",stdout);
+
     optimizeIO();
 
-    int tc;
-    cin>>tc;
+    multiset<int> a {1, 1 ,3, 7, 10, 10 , 13, 20 , 20 , 20};
+	multiset<int> b {2, 3, 5, 7, 7, 11, 11, 11, 13, 15, 19};
 
-    for(int qq=1;qq<=tc;qq++)
-    {
-        string s;
-        cin>>s;
+	vector<int> v;
+	merge(a.begin(), a.end(), b.begin(), b.end(), back_inserter(v));
 
-        int ans = minimumPalindromeLength(s);
+	multiset<int> m(v.begin(), v.end());
 
-        cout<<"Case "<<qq<<": ";
-        cout<<ans<<endl;
-
-    }
+	for(const auto &element : m) {
+		cout << element << " ";
+	}
+	cout << endl;
 
     return 0;
 }
@@ -165,5 +118,6 @@ ostream &operator <<(ostream &os, set<T>&v)
     os<<" ]";
     return os;
 }
+
 
 
