@@ -181,6 +181,10 @@
    * [Using Comparator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%201).cpp)
    * [Overloading **<** operator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%202).cpp)
    * [Overloading **>** operator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%203).cpp)
+ 
+ * ***Geometry Template***
+   * [Point & Line](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/02%20Geometry%20Template%20(Point%20%26%20Line).cpp)
+   * [Rectangle](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/03%20Geometry%20Template%20(Rectangle).cpp)
 
 
 ### Md. Zarif Ul Alam
