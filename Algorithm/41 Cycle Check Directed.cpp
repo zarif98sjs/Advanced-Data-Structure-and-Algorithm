@@ -8,7 +8,7 @@ White : Not visited yet
 Grey  : Visited , but not done with all neighbors
 Black : Done
 
-An undirected graph has cycle if it visits a grey node
+A directed graph has cycle if it visits a grey node
 
 Complexity : O(V+E)
 
@@ -39,7 +39,8 @@ using indexed_set = tree<
                     TIn, null_type, less<TIn>,
                     rb_tree_tag, tree_order_statistics_node_update>;
 
-/*
+/**
+
 PBDS
 -------------------------------------------------
 1) insert(value)
@@ -47,7 +48,7 @@ PBDS
 3) order_of_key(value) // 0 based indexing
 4) *find_by_order(position) // 0 based indexing
 
-*/
+**/
 
 inline void optimizeIO()
 {
@@ -64,11 +65,6 @@ string to_str(LL x)
     ss<<x;
     return ss.str();
 }
-
-//bool cmp(const PII &A,const PII &B)
-//{
-//
-//}
 
 vector<int>adj[nmax];
 vector<int>col(nmax,0);
@@ -106,7 +102,6 @@ int main()
         cin>>a>>b;
 
         adj[a].push_back(b);
-        adj[b].push_back(a);
     }
 
     bool ok = false;
