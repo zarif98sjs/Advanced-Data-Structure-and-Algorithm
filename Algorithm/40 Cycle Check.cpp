@@ -8,7 +8,8 @@ White : Not visited yet
 Grey  : Visited , but not done with all neighbors
 Black : Done
 
-An undirected graph has cycle if it visits a grey node except it's parent
+An undirected graph has cycle if it visits a node twice (except it's parent)
+(If it is visited more than once , then there is 2 paths to reach this vertex i.e cycle in undirected graph)
 
 Complexity : O(V+E)
 
@@ -39,7 +40,8 @@ using indexed_set = tree<
                     TIn, null_type, less<TIn>,
                     rb_tree_tag, tree_order_statistics_node_update>;
 
-/*
+/**
+
 PBDS
 -------------------------------------------------
 1) insert(value)
@@ -47,7 +49,7 @@ PBDS
 3) order_of_key(value) // 0 based indexing
 4) *find_by_order(position) // 0 based indexing
 
-*/
+**/
 
 inline void optimizeIO()
 {
@@ -57,18 +59,6 @@ inline void optimizeIO()
 
 const int nmax = 2e5+7;
 const LL LINF = 1e17;
-
-string to_str(LL x)
-{
-    stringstream ss;
-    ss<<x;
-    return ss.str();
-}
-
-//bool cmp(const PII &A,const PII &B)
-//{
-//
-//}
 
 vector<int>adj[nmax];
 vector<bool>vis(nmax,false);
