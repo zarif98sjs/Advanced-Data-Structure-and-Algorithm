@@ -2,7 +2,8 @@
 
 # Algorithm
 
-<h3> <b><i>Graph Theory</i></b> </h3>
+<details>
+    <summary> <h2> <b><i>Graph Theory</i></b> </h2> </summary>
 
 * ***Graph Traversal***
   * BFS
@@ -36,7 +37,9 @@
   * [Topological Sort](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/12%20Topological%20Sort.cpp)
   * [Strongly Connected Component (SCC)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/13%20Strongly%20Connected%20Component.cpp)
   * [Lowest Common Ancestor (LCA)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/09%20Lowest%20Common%20Ancestor.cpp)
-  
+
+</details>
+
 <h3> <b><i>Number Theory</i></b> </h3>
 
 * ***Power & Modulus***
