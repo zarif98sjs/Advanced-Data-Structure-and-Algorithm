@@ -5,8 +5,10 @@
 <details>
 <summary>  
     
-```python
-Graph Theory
+```c++
+int main(){
+    cout<<"Graph Thoery"<<endl;
+}
 ```
 </summary>
 
@@ -48,8 +50,10 @@ Graph Theory
 <details>
 <summary>  
     
-```python
-Number Theory
+```c++
+int main(){
+    cout<<"Number Thoery"<<endl;
+}
 ```
 </summary>
 
@@ -91,8 +95,10 @@ Number Theory
 <details>
 <summary>  
     
-```python
-String
+```c++
+int main(){
+    cout<<"String"<<endl;
+}
 ```
 </summary>
     
@@ -104,8 +110,10 @@ String
 <details>
 <summary>  
     
-```python
-Backtracking
+```c++
+int main(){
+    cout<<"Backtracking"<<endl;
+}
 ```
 </summary>
  
@@ -119,8 +127,10 @@ Backtracking
 <details>
 <summary>  
     
-```python
-Search Technique
+```c++
+int main(){
+    cout<<"Search Technique"<<endl;
+}
 ```
 </summary>
  
@@ -148,14 +158,14 @@ Search Technique
     
 * ***Recursive Segment Tree***
   * *Non Lazy (Point Update , Range Query)*
-     ```
+     ```ruby
      build : O(N) 
      update , query : O(logN)
      ```
     * [Range Sum](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp) *( Possible Variations : Range [ **Multiplication , Min , Max , GCD , LCM , and , or , xor** ] )*
     * [Maximum **Prefix Sum** & Maximum **Suffix Sum** & Maximum Contiguous **SubArray Sum**](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/13%20Segment%20Tree%20Max%20Prefix_Suffix_SubArray%20Sum.cpp)
   * *Lazy (Range Update , Range Query)* 
-     ```
+     ```ruby
      build : O(N) 
      update , query : O(logN)
      ```
@@ -165,13 +175,13 @@ Search Technique
     * [Range Flip Update , Range Sum Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/27%20SegmentTreeLazy%20(Range%20Flip%20Update%20%2C%20Range%20Sum%20Query).cpp)
   * *Merge Sort Tree*
     * [Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/05%20Merge%20Sort%20Tree.cpp)  
-      ```
+      ```ruby
       build  : O( NlogN )
       query  : O( (logN)^2 )
       memory : O( NlogN )
       ```
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/19%20Merge%20Sort%20Tree%202.cpp)  
-      ```
+      ```ruby
       build  : O( N (logN)^2 )
       update , query : O( (logN)^2 )
       memory :   O( NlogN )
@@ -179,7 +189,7 @@ Search Technique
       
 * ***Iterative Segment Tree***
   * *Non Lazy*
-     ```
+     ```ruby
      build : O(N) 
      update , query : O(logN)
      ```
