@@ -3,7 +3,12 @@
 # Algorithm
 
 <details>
-    <summary>  <b><i>Graph Theory</i></b> </summary>
+<summary>  
+    
+```python
+Graph Theory
+```
+</summary>
 
 * ***Graph Traversal***
   * BFS
@@ -41,7 +46,12 @@
 </details>
 
 <details>
-    <summary> <b><i>Number Theory</i></b> </summary>
+<summary>  
+    
+```python
+Number Theory
+```
+</summary>
 
 * ***Power & Modulus***
   * [Power](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/18%20Power.cpp)
@@ -79,7 +89,12 @@
 
  
 <details>
-    <summary>  <b><i>String</i></b> </summary>
+<summary>  
+    
+```python
+String
+```
+</summary>
     
  * [***Suffix Array***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/23%20Suffix%20Array%204.cpp) : **O( NlogN )**
  * [***Longest Common Prefix (LCP) Array Construction***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/43%20Longest%20Common%20Prefix.cpp) : **O(N)**
@@ -87,7 +102,12 @@
 </details>
 
 <details>
-    <summary> <b><i>Backtracking</i></b> </summary>
+<summary>  
+    
+```python
+Backtracking
+```
+</summary>
  
   * ***N Queen***
     * [Easy to Understand](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/45%20Backtrack%20N%20Queen.cpp)
@@ -97,7 +117,12 @@
 </details>
 
 <details>
-   <summary> <b><i>Search Technique</i></b> </summary>
+<summary>  
+    
+```python
+Search Technique
+```
+</summary>
  
   * ***Binary Search*** 
    * [*lower_bound* , *upper_bound* implementation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/42%20Binary%20Search.cpp)
