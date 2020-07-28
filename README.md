@@ -3,7 +3,7 @@
 # Algorithm
 
 <details>
-    <summary> <h2> <b><i>Graph Theory</i></b> </h2> </summary>
+    <summary>  <b><i>Graph Theory</i></b> </summary>
 
 * ***Graph Traversal***
   * BFS
@@ -40,7 +40,8 @@
 
 </details>
 
-<h3> <b><i>Number Theory</i></b> </h3>
+<details>
+    <summary> <b><i>Number Theory</i></b> </summary>
 
 * ***Power & Modulus***
   * [Power](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/18%20Power.cpp)
@@ -73,30 +74,38 @@
   * Prime Factorization of N Factorial O(N*log(N))
   * Find the first K digits of N!
 * [***Chinese Remainder Theorem***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/34%20Chinese%20Remainder%20Theorem.cpp)
- 
-  
-<h3> <b><i>String</i></b> </h3>
 
+</details>
+
+ 
+<details>
+    <summary>  <b><i>String</i></b> </summary>
+    
  * [***Suffix Array***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/23%20Suffix%20Array%204.cpp) : **O( NlogN )**
  * [***Longest Common Prefix (LCP) Array Construction***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/43%20Longest%20Common%20Prefix.cpp) : **O(N)**
  * [***Prefix Function (KMP ALgorithm)***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/44%20Prefix%20Function%20KMP.cpp) : **O(N)**
-  
-  
-<h3> <b><i>Backtracking</i></b> </h3>
+</details>
 
+<details>
+    <summary> <b><i>Backtracking</i></b> </summary>
+ 
   * ***N Queen***
     * [Easy to Understand](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/45%20Backtrack%20N%20Queen.cpp)
     * [Optimized](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/46%20Backtrack%20N%20Queen%20Optimized.cpp)
   * [***Knight's Tour***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/47%20Backtrack%20Knight's%20Tour.cpp)
+ 
+</details>
 
-  
-<h3> <b><i>Search Technique</i></b> </h3>
-
- * ***Binary Search*** 
+<details>
+   <summary> <b><i>Search Technique</i></b> </summary>
+ 
+  * ***Binary Search*** 
    * [*lower_bound* , *upper_bound* implementation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/42%20Binary%20Search.cpp)
    * [Solve Equation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/16%20Binary%20Search%20(Eqn%20Solve).cpp)
    * [Meet In The Middle](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/17%20Binary%20Search%20(Meet%20In%20The%20Middle).cpp)
-    
+   
+</details>
+  
 
 # Data Structure
 
