@@ -8,12 +8,7 @@
   * BFS
     * [Single Source BFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/01%20BFS.cpp) 
     * [Multi Source BFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/37%20Multisource%20BFS.cpp)
-  * DFS
-    * [Simple DFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/02%20DFS.cpp)
-    * [Cycle Check ***(Undirected Graph)***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/40%20Cycle%20Check.cpp)
-    * [Cycle Check ***(Directed Graph)***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/41%20Cycle%20Check%20Directed.cpp)
-    * [Bipartite / Bicolorable / Odd Cycle existence check](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/39%20Bipartite%20check.cpp)
-    * [Subtree Size](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/38%20Subtree%20Size.cpp)
+  * [DFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/02%20DFS.cpp)
 * ***Single Source Shortest Path (SSSP)***
   * [Dijkstra](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/03%20Dijkstra%20%5BSingle%20Source%20Shortest%20Path%5D.cpp)
   * [Bellman Ford](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/04%20Bellman%20Ford%20%5BSingle%20Source%20Shortest%20Path%5D.cpp)
@@ -23,15 +18,24 @@
 * ***Minimum Spanning Tree***
   * [Prim-Jarnik](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/07%20Prim's%20MST.cpp)
   * [Kruskal](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/08%20Kruskal's%20MST.cpp)
+* ***Cycle***
+  * Cycle Check
+    * [**Unirected Graph**](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/40%20Cycle%20Check.cpp)
+    * **Directed graph**
+      1. [Colouring](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/41%20Cycle%20Check%20Directed.cpp)
+      2. [Top Sort](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/41.2%20Cycle%20Check%20Directed%202.cpp)
+  * [Odd Cycle existence / Bipartite / Bicolorable check](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/39%20Bipartite%20check.cpp)
 * ***Articulation***
   * [Articulation Point](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/10%20Articulation%20Point.cpp)
   * [Articulation Bridge](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/11%20Articulation%20Bridge.cpp)
   * [Biconnected Components](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/14%20Biconnected%20Components.cpp)
   * [Bridge Tree](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/15%20Bridge%20Tree.cpp)
+* ***DP***
+  * [Subtree Size](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/38%20Subtree%20Size.cpp)
 * ***Miscellaneous***
-  * [Lowest Common Ancestor (LCA)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/09%20Lowest%20Common%20Ancestor.cpp)
   * [Topological Sort](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/12%20Topological%20Sort.cpp)
   * [Strongly Connected Component (SCC)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/13%20Strongly%20Connected%20Component.cpp)
+  * [Lowest Common Ancestor (LCA)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/09%20Lowest%20Common%20Ancestor.cpp)
   
 <h3> <b><i>Number Theory</i></b> </h3>
 
@@ -74,6 +78,14 @@
  * [***Longest Common Prefix (LCP) Array Construction***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/43%20Longest%20Common%20Prefix.cpp) : **O(N)**
  * [***Prefix Function (KMP ALgorithm)***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/44%20Prefix%20Function%20KMP.cpp) : **O(N)**
   
+  
+<h3> <b><i>Backtracking</i></b> </h3>
+
+  * ***N Queen***
+    * [Easy to Understand](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/45%20Backtrack%20N%20Queen.cpp)
+    * [Optimized](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/46%20Backtrack%20N%20Queen%20Optimized.cpp)
+  * [***Knight's Tour***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/47%20Backtrack%20Knight's%20Tour.cpp)
+
   
 <h3> <b><i>Search Technique</i></b> </h3>
 
