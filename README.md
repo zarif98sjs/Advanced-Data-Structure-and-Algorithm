@@ -133,9 +133,9 @@
 </summary>
  
   * ***Binary Search*** 
-   * [*lower_bound* , *upper_bound* implementation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/42%20Binary%20Search.cpp)
-   * [Solve Equation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/16%20Binary%20Search%20(Eqn%20Solve).cpp)
-   * [Meet In The Middle](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/17%20Binary%20Search%20(Meet%20In%20The%20Middle).cpp)
+    * [*lower_bound* , *upper_bound* implementation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/42%20Binary%20Search.cpp)
+    * [Solve Equation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/16%20Binary%20Search%20(Eqn%20Solve).cpp)
+    * [Meet In The Middle](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/17%20Binary%20Search%20(Meet%20In%20The%20Middle).cpp)
    
 </details>
   
