@@ -37,6 +37,7 @@
   * [Articulation Bridge](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/11%20Articulation%20Bridge.cpp)
   * [Biconnected Components](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/14%20Biconnected%20Components.cpp)
   * [Bridge Tree](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/15%20Bridge%20Tree.cpp)
+* [***Euler Tour***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/48%20Euler%20Tour.cpp)
 * ***DP***
   * [Subtree Size](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/38%20Subtree%20Size.cpp)
 * ***Miscellaneous***
@@ -262,10 +263,15 @@
    * [Using Comparator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%201).cpp)
    * [Overloading **<** operator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%202).cpp)
    * [Overloading **>** operator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%203).cpp)
+   
+ * ***Integer Root***
+   * [Square Root *(Binary Search)*](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/04%20Square%20Root%20Binary%20Search.cpp) **(Modifiable to nth Root)**
+   * [Fast Square & Cube Root](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/05%20Fast%20Integer%20Cube%20and%20Square%20Root.cpp)
  
  * ***Geometry Template***
    * [Point & Line](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/02%20Geometry%20Template%20(Point%20%26%20Line).cpp)
    * [Rectangle](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/03%20Geometry%20Template%20(Rectangle).cpp)
+  
 
 
 ### Md. Zarif Ul Alam
