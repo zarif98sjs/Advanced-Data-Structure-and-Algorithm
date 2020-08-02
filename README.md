@@ -192,11 +192,16 @@
      build : O(N) 
      update , query : O(logN)
      ```
-    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/28%20Iterative%20Segment%20Tree%20(Point%20Update%2CRange%20Query).cpp) *( Possible Variations : Range [ **Multiplication , Min , Max , GCD , LCM , and , or , xor** ] )*
+    * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/28%20Iterative%20Segment%20Tree%20(Point%20Update%2CRange%20Query).cpp)  
+    *( Possible Variations : Range [ **Multiplication , Min , Max , GCD , LCM , and , or , xor** ] )*
     * [Range Update , Point Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/29%20Iterative%20Segment%20Tree%20(Range%20Update%2CPoint%20Query).cpp)
 
 * [***Sweep Line Algorithm***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/06%20Sweep%20Line%20Algorithm.cpp)
 * ***Mo's Algorithm (Square Root Decomposition)***
+    ```ruby
+    Total Complexity : O ( (N+Q)F * sqrt(N) )
+    where O(F) is the complexity of add and remove function
+    ```
   * [Range **Sum** Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/07%20Mo's%20Algo%20(RANGE%20sum%20query).cpp)
   * [Range **Mode** (Highest Frequency) Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/09%20Mo's%20Algo%20(RANGE%20mode%20query%20Optimized).cpp)
 * ***Suffix Array***
