@@ -161,17 +161,17 @@
      build : O(N) 
      update , query : O(logN)
      ```
-    * [Range Sum](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp) *( Possible Variations : Range [ **Multiplication , Min , Max , GCD , LCM , and , or , xor** ] )*
+    * [Range **Sum**](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp) *( Possible Variations : Range [ **Multiplication , Min , Max , GCD , LCM , and , or , xor** ] )*
     * [Maximum **Prefix Sum** & Maximum **Suffix Sum** & Maximum Contiguous **SubArray Sum**](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/13%20Segment%20Tree%20Max%20Prefix_Suffix_SubArray%20Sum.cpp)
   * *Lazy (Range Update , Range Query)* 
      ```ruby
      build : O(N) 
      update , query : O(logN)
      ```
-    * [Range Assignment Update , Range Sum Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/24%20SegmentTreeLazy%20(Range%20Assignment%20Update%20%2C%20Range%20Sum%20Query).cpp)
-    * [Range Increment Update , Range Sum Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/25%20SegmentTreeLazy%20(Range%20Increment%20Update%20%2C%20Range%20Sum%20Query).cpp)
-    * [Range Increment Update , RMQ](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/26%20SegmentTreeLazy%20(Range%20Increment%20Update%20%2C%20RMQ).cpp)
-    * [Range Flip Update , Range Sum Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/27%20SegmentTreeLazy%20(Range%20Flip%20Update%20%2C%20Range%20Sum%20Query).cpp)
+    * [Range **Assignment** Update , Range **Sum** Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/24%20SegmentTreeLazy%20(Range%20Assignment%20Update%20%2C%20Range%20Sum%20Query).cpp)
+    * [Range **Increment** Update , Range **Sum** Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/25%20SegmentTreeLazy%20(Range%20Increment%20Update%20%2C%20Range%20Sum%20Query).cpp)
+    * [Range **Increment** Update , **RMQ**](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/26%20SegmentTreeLazy%20(Range%20Increment%20Update%20%2C%20RMQ).cpp)
+    * [Range **Flip** Update , Range **Sum** Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/27%20SegmentTreeLazy%20(Range%20Flip%20Update%20%2C%20Range%20Sum%20Query).cpp)
   * *Merge Sort Tree*
     * [Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/05%20Merge%20Sort%20Tree.cpp)  
       ```ruby
@@ -204,6 +204,7 @@
     ```
   * [Range **Sum** Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/07%20Mo's%20Algo%20(RANGE%20sum%20query).cpp)
   * [Range **Mode** (Highest Frequency) Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/09%20Mo's%20Algo%20(RANGE%20mode%20query%20Optimized).cpp)
+  * [Range **Number of Distinct Elements** Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/30%20Range%20Distinct%20Elements.cpp)
 * ***Suffix Array***
   * [**O( N^2 logN )**](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/20%20Suffix%20Array%201.cpp)
   * [**O( N (logN)^2 )**](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/21%20Suffix%20Array%202.cpp)
