@@ -286,7 +286,7 @@
   
 # Miscellaneous
  * ***Operator Overloading for sorting / STL Data Structure***
-   * [Using Comparator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%201).cpp)
+   * [Using Comparator ***functions / structure***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%201).cpp)
    * [Overloading **<** operator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%202).cpp)
    * [Overloading **>** operator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%203).cpp)
    
