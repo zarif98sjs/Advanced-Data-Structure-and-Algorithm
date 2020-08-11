@@ -109,17 +109,37 @@
 <summary>  
     
 ```c++
+
+█▀█ █▀▀ █▀▀ █░█ █▀█ █▀ █ █▀█ █▄░█   ▄▀█ █▄░█ █▀▄
+█▀▄ ██▄ █▄▄ █▄█ █▀▄ ▄█ █ █▄█ █░▀█   █▀█ █░▀█ █▄▀
+
 █▄▄ ▄▀█ █▀▀ █▄▀ ▀█▀ █▀█ ▄▀█ █▀▀ █▄▀ █ █▄░█ █▀▀
 █▄█ █▀█ █▄▄ █░█ ░█░ █▀▄ █▀█ █▄▄ █░█ █ █░▀█ █▄█
 ```
 </summary>
- 
+
+  * [Generate all **subsets**](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/49%20Generate%20all%20subset.cpp)
+  * [Generate all **permutations**](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/50%20Generate%20all%20permutation.cpp)
   * ***N Queen***
     * [Easy to Understand](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/45%20Backtrack%20N%20Queen.cpp)
     * [Optimized](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/46%20Backtrack%20N%20Queen%20Optimized.cpp)
   * [***Knight's Tour***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/47%20Backtrack%20Knight's%20Tour.cpp)
  
 </details>
+
+<details>
+<summary>
+    
+```c++
+█▄▄ █ ▀█▀
+█▄█ █ ░█░
+```
+</summary>
+
+* [Bit Manipulation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/51%20Bit%20Manipulation.cpp)
+* [***Builtin*** Functions](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/52%20Bit%20Builtin%20Functions.cpp)
+
+</details>    
 
 <details>
 <summary>  
@@ -134,7 +154,7 @@
 </summary>
  
   * ***Binary Search*** 
-    * [*lower_bound* , *upper_bound* implementation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/42%20Binary%20Search.cpp)
+    * [***lower_bound*** , ***upper_bound*** implementation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/42%20Binary%20Search.cpp)
     * [Solve Equation](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/16%20Binary%20Search%20(Eqn%20Solve).cpp)
     * [Meet In The Middle](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/17%20Binary%20Search%20(Meet%20In%20The%20Middle).cpp)
    
