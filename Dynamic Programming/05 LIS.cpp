@@ -5,7 +5,8 @@ Problem : Longest Increasing Subsequence
 
 **/
 
-/**Which of the favors of your Lord will you deny ?**/
+
+/** Which of the favors of your Lord will you deny ? **/
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -13,32 +14,25 @@ using namespace std;
 #define LL long long
 #define PII pair<int,int>
 #define PLL pair<LL,LL>
-#define MP make_pair
 #define F first
 #define S second
-#define INF INT_MAX
 
-#define ALL(x) (x).begin(), (x).end()
-#define DBG(x) cerr << __LINE__ << " says: " << #x << " = " << (x) << endl
+#define ALL(x)      (x).begin(), (x).end()
+#define READ        freopen("alu.txt", "r", stdin)
+#define WRITE       freopen("vorta.txt", "w", stdout)
 
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
+#ifndef ONLINE_JUDGE
+#define DBG(x)      cout << __LINE__ << " says: " << #x << " = " << (x) << endl
+#else
+#define DBG(x)
+#endif
 
-template<class TIn>
-using indexed_set = tree<
-                    TIn, null_type, less<TIn>,
-                    rb_tree_tag, tree_order_statistics_node_update>;
-
-/*
-PBDS
--------------------------------------------------
-1) insert(value)
-2) erase(value)
-3) order_of_key(value) // 0 based indexing
-4) *find_by_order(position) // 0 based indexing
-
-*/
+template<class T1, class T2>
+ostream &operator <<(ostream &os, pair<T1,T2>&p);
+template <class T>
+ostream &operator <<(ostream &os, vector<T>&v);
+template <class T>
+ostream &operator <<(ostream &os, set<T>&v);
 
 inline void optimizeIO()
 {
@@ -49,60 +43,100 @@ inline void optimizeIO()
 const int nmax = 2e5+7;
 const LL LINF = 1e17;
 
-string to_str(LL x)
-{
-    stringstream ss;
-    ss<<x;
-    return ss.str();
-}
-
-//bool cmp(const PII &A,const PII &B)
-//{
-//
-//}
-
 /** 1 based indexing **/
 
 /**
+
 LIS[i] = LIS ending at index i
+
 **/
-int LIS[nmax];
-vector<int>SEQ[nmax];
 
 int main()
 {
     optimizeIO();
 
-    vector<int>ara = {-1,6,2,5,1,7,4,8,3};
-    int n=ara.size()-1;
+    int n;
+    cin>>n;
 
-    for(int i=1;i<=n;i++)
+    vector<int> v(n);
+
+    for(int i=0;i<n;i++)
+        cin>>v[i];
+
+    vector<int>LIS(n,1); /** length of longest increasing sequence ending at i **/
+    vector<vector<int>>SEQ(n);  /** longest increasing sequence ending at i **/
+
+    for(int i=0;i<n;i++)
     {
-        LIS[i] = 1;
-        for(int j=1;j<=i;j++)
+        for(int j=0;j<i;j++)
         {
-            if(ara[i]>ara[j])
+            if(v[i]>v[j])
             {
-                LIS[i] = max(LIS[i],LIS[j]+1); /** **/
-                if(SEQ[j].size()+1 > SEQ[i].size()) SEQ[i] = SEQ[j];
+                if(LIS[j]+1 > LIS[i])
+                {
+                    LIS[i] = LIS[j]+1;
+                    SEQ[i] = SEQ[j];
+                }
             }
         }
-        SEQ[i].push_back(ara[i]);
+        SEQ[i].push_back(v[i]);
+        DBG(SEQ[i]);
     }
 
-    int lis_len = *max_element(LIS+1,LIS+n+1);
+    int lis_len = *max_element(ALL(LIS));
+    DBG(lis_len);
 
-    vector<int>lis = SEQ[1];
+    int mx = 0;
+    vector<int>MX;
 
-    for(int i=2;i<=n;i++)
-        if(SEQ[i].size()>lis.size())
-            lis = SEQ[i];
+    for(int i=0; i<n; i++)
+    {
+        if(LIS[i]>mx)
+        {
+            mx = LIS[i];
+            MX = SEQ[i];
+        }
+    }
 
-    for(auto x:lis)
+    for(auto x:MX)
         cout<<x<<" ";
     cout<<endl;
 
     return 0;
+}
+/**
+5
+1 6 2 3 5
+**/
+
+template<class T1, class T2>
+ostream &operator <<(ostream &os, pair<T1,T2>&p)
+{
+    os<<"{"<<p.first<<", "<<p.second<<"} ";
+    return os;
+}
+template <class T>
+ostream &operator <<(ostream &os, vector<T>&v)
+{
+    os<<"[ ";
+    for(int i=0; i<v.size(); i++)
+    {
+        os<<v[i]<<" " ;
+    }
+    os<<" ]";
+    return os;
+}
+
+template <class T>
+ostream &operator <<(ostream &os, set<T>&v)
+{
+    os<<"[ ";
+    for(T i:v)
+    {
+        os<<i<<" ";
+    }
+    os<<" ]";
+    return os;
 }
 
 
