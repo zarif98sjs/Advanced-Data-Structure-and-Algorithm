@@ -72,7 +72,7 @@ public:
     }
 };
 
-ostream &operator <<(ostream &os, Node &node)
+ostream &operator <<(ostream &os, const Node &node)
 {
     os<<"Id : "<<node.id<<" , Cost : "<<node.cost<<" , Name : "<<node.name;
     return os;
@@ -86,9 +86,25 @@ bool cmp(const Node &A,const Node &B) /** Sort with descending order of cost **/
     return A.cost>B.cost;
 }
 
+struct Comparator
+{
+    bool operator()(const Node &A,const Node &B) /** Sort with descending order of cost **/
+    {
+        if(A.cost==B.cost)
+            return A.name<B.name;
+
+        return A.cost>B.cost;
+    }
+};
+
+
 int main()
 {
     optimizeIO();
+
+    /**
+        VECTOR
+    **/
 
     vector<Node>v;
 
@@ -100,9 +116,41 @@ int main()
 
     cout<<v<<endl;
 
-    sort(ALL(v),cmp);
+    sort(ALL(v),cmp); /** comparator function **/
+    sort(ALL(v),Comparator()); /** comparator structure **/
 
     cout<<v<<endl;
+
+    /**
+        SET
+    **/
+
+    set<Node,Comparator>st; /** Uses the Comparator structure **/
+    st.insert(Node(1,100,"C"));
+    st.insert(Node(1,100,"A"));
+    st.insert(Node(1,100,"B"));
+    st.insert(Node(1,500,"AB"));
+    st.insert(Node(1,50,"ABC"));
+
+    for(auto x:st)
+        cout<<x.cost<<" "<<x.name<<endl;
+
+    /**
+        Priority Queue
+        PRIORITY QUEUE is MAX HEAP by default .
+        So , the result will be opposite of what we got in SET .
+    **/
+
+    priority_queue<Node,vector<Node>,Comparator>pq;
+    pq.push(Node(1,100,"C"));
+    pq.push(Node(1,100,"A"));
+    pq.push(Node(1,100,"B"));
+    pq.push(Node(1,500,"AB"));
+    pq.push(Node(1,50,"ABC"));
+
+    while(!pq.empty())
+        cout<<pq.top()<<" ", pq.pop();
+    cout<<endl;
 
     return 0;
 }

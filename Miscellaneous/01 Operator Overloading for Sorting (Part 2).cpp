@@ -90,6 +90,10 @@ int main()
 {
     optimizeIO();
 
+    /**
+        VECTOR
+    **/
+
     vector<Node>v;
 
     v.push_back(Node(1,100,"C"));
@@ -103,6 +107,10 @@ int main()
     sort(ALL(v)); /** Uses the overloaded < operator **/
 
     cout<<v<<endl;
+
+    /**
+        SET
+    **/
 
     set<Node>st; /** Uses the overloaded < operator **/
     st.insert(Node(1,100,"C"));
