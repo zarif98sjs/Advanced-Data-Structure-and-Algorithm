@@ -290,6 +290,8 @@
    * [Overloading **<** operator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%202).cpp)
    * [Overloading **>** operator](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%203).cpp)
    
+ * [***BIg Integer Library***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/06%20Big_Integer.cpp)
+   
  * ***Integer Root***
    * [Square Root *(Binary Search)*](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/04%20Square%20Root%20Binary%20Search.cpp) **(Modifiable to nth Root)**
    * [Fast Square & Cube Root](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Miscellaneous/05%20Fast%20Integer%20Cube%20and%20Square%20Root.cpp)
