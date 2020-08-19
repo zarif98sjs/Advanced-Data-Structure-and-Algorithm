@@ -13,8 +13,8 @@
 
 * ***Graph Traversal***
   * BFS
-    * [Single Source BFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/01%20BFS.cpp) 
-    * [Multi Source BFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/37%20Multisource%20BFS.cpp)
+    * [Single Source BFS](Algorithm/01%20BFS.cpp) 
+    * [Multi Source BFS](Algorithm/37%20Multisource%20BFS.cpp)
   * [DFS](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/02%20DFS.cpp)
 * ***Single Source Shortest Path (SSSP)***
   * [Dijkstra](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/03%20Dijkstra%20%5BSingle%20Source%20Shortest%20Path%5D.cpp)
