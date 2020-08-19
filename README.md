@@ -40,6 +40,7 @@
 * [***Euler Tour***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/48%20Euler%20Tour.cpp)
 * ***DP***
   * [Subtree Size](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/38%20Subtree%20Size.cpp)
+* [***Binary Lifting***](https://github.com/zarif98sjs/Writeup/blob/master/Algorithms%20%26%20Data%20Structure/Binary%20Lifting.md)
 * ***Miscellaneous***
   * [Topological Sort](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/12%20Topological%20Sort.cpp)
   * [Strongly Connected Component (SCC)](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Algorithm/13%20Strongly%20Connected%20Component.cpp)
@@ -215,7 +216,10 @@
     * [Point Update , Range Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/28%20Iterative%20Segment%20Tree%20(Point%20Update%2CRange%20Query).cpp)  
     *( Possible Variations : Range [ **Multiplication , Min , Max , GCD , LCM , and , or , xor** ] )*
     * [Range Update , Point Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/29%20Iterative%20Segment%20Tree%20(Range%20Update%2CPoint%20Query).cpp)
-
+    
+* ***Sparse Table***
+  * [Range Sum Query](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/31%20Sparse%20Table%20(Range%20Sum%20Query).cpp) : **O(logN)**
+  * [RMQ](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/32%20Sparse%20Table%20(RMQ).cpp) : **O(1)**
 * [***Sweep Line Algorithm***](https://github.com/zarif98sjs/Advanced-Data-Structure-and-Algorithm/blob/master/Data%20Structure/06%20Sweep%20Line%20Algorithm.cpp)
 * ***Mo's Algorithm (Square Root Decomposition)***
     ```ruby
