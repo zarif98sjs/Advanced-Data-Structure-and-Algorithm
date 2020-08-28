@@ -254,10 +254,16 @@
   * [Levenshtein / Edit Distance](Dynamic%20Programming/04%20Levenshtein%20or%20Edit%20Distance.cpp)
   * [Shortest Common Supersequence](Dynamic%20Programming/08%20Shortest%20Common%20Supersequence.cpp)
 * ***LIS Variant***
-  * [Longest Increasing Subsequence](Dynamic%20Programming/05%20LIS.cpp)
+  * Longest Increasing Subsequence
+    - [O(N^2)](Dynamic%20Programming/05%20LIS.cpp)
+    - [O( NlogN )](Dynamic%20Programming/05.2%20LIS%20(Binary%20Search).cpp) **Binary Search**
+    - [O( NlogN )]() **Segment Tree** //code not added
   * [Longest Bitonic Subsequence](Dynamic%20Programming/09%20Longest%20Bitonic%20Subsequence.cpp)
   * [Increasing Subsequence with Maximum Sum](Dynamic%20Programming/10%20Increasing%20Subsequence%20with%20Maximum%20Sum.cpp)
   * [Longest Increasing Index-Dividing Subsequence](Dynamic%20Programming/32%20Longest%20increasing%20index%20dividing%20subsequence.cpp)
+  * **Longest Common Increasing Subsequence**
+    - [O( N^3 )](Dynamic%20Programming/33%20Longest%20Common%20Increasing%20Subsequence.cpp)
+    - [O( N^2 )](/Dynamic%20Programming/34%20Longest%20Common%20Increasing%20Subsequence%20(Optimized).cpp) 
 * ***Coin Change*** 
   * [Coin Change (Minimum number of coins to make a sum)](Dynamic%20Programming/06%20Coin%20Change(Min%20Coin).cpp)
   * [Coin Change (Number of ways to make a sum)](Dynamic%20Programming/07%20Coin%20Change(Num.%20of%20Ways).cpp)

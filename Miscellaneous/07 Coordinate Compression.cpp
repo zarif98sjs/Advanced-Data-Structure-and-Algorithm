@@ -1,11 +1,4 @@
 
-/**
-
-Problem : Longest Increasing Subsequence
-
-**/
-
-
 /** Which of the favors of your Lord will you deny ? **/
 
 #include<bits/stdc++.h>
@@ -25,6 +18,7 @@ using namespace std;
 #define DBG(x)      cout << __LINE__ << " says: " << #x << " = " << (x) << endl
 #else
 #define DBG(x)
+#define endl "\n"
 #endif
 
 template<class T1, class T2>
@@ -41,76 +35,46 @@ inline void optimizeIO()
 }
 
 const int nmax = 2e5+7;
-const LL LINF = 1e17;
 
-/** 1 based indexing **/
-
-/**
-
-LIS[i] = LIS ending at index i
-
-**/
-
-vector<int> solveLIS(vector<int>&v)
+vector<int> compress(vector<int> &v) /// compress v to [1,max distinct number range]
 {
-    int n = v.size();
+    vector<int>c = v;
+    map<int,int>m;
 
-    vector<int>LIS(n,1); /** length of longest increasing sequence ending at i **/
-    vector<vector<int>>SEQ(n);  /** longest increasing sequence ending at i **/
+    for(int x:c) m[x] = 1;
 
-    for(int i=0; i<n; i++)
-    {
-        for(int j=0; j<i; j++)
-        {
-            if(v[i]>v[j])
-            {
-                if(LIS[j]+1 > LIS[i])
-                {
-                    LIS[i] = LIS[j]+1;
-                    SEQ[i] = SEQ[j];
-                }
-            }
-        }
-        SEQ[i].push_back(v[i]);
-//        DBG(SEQ[i]);
-    }
+    int val = 0;
+    for(auto x:m) m[x.F] = ++val;
 
-    int lis_len = *max_element(ALL(LIS));
-    DBG(lis_len);
+    for(int &x:c) x = m[x];
 
-    vector<int>vLIS;
-
-    for(int i=0; i<n; i++)
-    {
-        if(LIS[i]==lis_len)
-        {
-            vLIS = SEQ[i];
-        }
-    }
-
-    return vLIS;
+    return c;
 }
 
 int main()
 {
     optimizeIO();
 
-    int n;
-    cin>>n;
+    int tc;
+    cin>>tc;
 
-    vector<int> v(n);
+    while(tc--)
+    {
+        int n;
+        cin>>n;
 
-    for(int i=0; i<n; i++)
-        cin>>v[i];
+        vector<int>v(n);
+        for(int i=0;i<n;i++) cin>>v[i];
 
-    vector<int>ans = solveLIS(v);
-    DBG(ans);
+        vector<int>compressed = compress(v);
+        DBG(compressed);
+    }
 
     return 0;
 }
+
 /**
-5
-1 6 2 3 5
+
 **/
 
 template<class T1, class T2>
@@ -142,5 +106,3 @@ ostream &operator <<(ostream &os, set<T>&v)
     os<<" ]";
     return os;
 }
-
-

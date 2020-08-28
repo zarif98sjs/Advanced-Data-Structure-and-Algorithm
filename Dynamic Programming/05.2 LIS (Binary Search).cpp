@@ -1,10 +1,14 @@
 
 /**
 
-Problem : Longest Increasing Subsequence
+Longest Increasing Subsequnce (Optimized using Binary Search)
+-----------------------------
 
+Complexity : O( NlogN )
+
+Details : https://cp-algorithms.com/sequences/longest_increasing_subsequence.html
+ 
 **/
-
 
 /** Which of the favors of your Lord will you deny ? **/
 
@@ -25,6 +29,7 @@ using namespace std;
 #define DBG(x)      cout << __LINE__ << " says: " << #x << " = " << (x) << endl
 #else
 #define DBG(x)
+#define endl "\n"
 #endif
 
 template<class T1, class T2>
@@ -41,54 +46,25 @@ inline void optimizeIO()
 }
 
 const int nmax = 2e5+7;
-const LL LINF = 1e17;
+const int INF = 1e9;
 
-/** 1 based indexing **/
-
-/**
-
-LIS[i] = LIS ending at index i
-
-**/
-
-vector<int> solveLIS(vector<int>&v)
+int solveLIS(vector<int> &v)
 {
     int n = v.size();
 
-    vector<int>LIS(n,1); /** length of longest increasing sequence ending at i **/
-    vector<vector<int>>SEQ(n);  /** longest increasing sequence ending at i **/
+    vector<int>d(n+1,INF); /// d[i] = element at which subsequence of length i terminates
+    vector<int>LIS(n,1);
+    d[0] = -INF;
 
-    for(int i=0; i<n; i++)
+    for(int i=0;i<n;i++)
     {
-        for(int j=0; j<i; j++)
-        {
-            if(v[i]>v[j])
-            {
-                if(LIS[j]+1 > LIS[i])
-                {
-                    LIS[i] = LIS[j]+1;
-                    SEQ[i] = SEQ[j];
-                }
-            }
-        }
-        SEQ[i].push_back(v[i]);
-//        DBG(SEQ[i]);
+        int len = upper_bound(ALL(d),v[i]) - d.begin(); /// finding the one and only correct position of the current element
+
+        if(v[i] > d[len-1] && v[i] < d[len]) /// if greater than previous element and a better option
+            d[len] = v[i] , LIS[i] = len;
     }
 
-    int lis_len = *max_element(ALL(LIS));
-    DBG(lis_len);
-
-    vector<int>vLIS;
-
-    for(int i=0; i<n; i++)
-    {
-        if(LIS[i]==lis_len)
-        {
-            vLIS = SEQ[i];
-        }
-    }
-
-    return vLIS;
+    return *max_element(ALL(LIS));
 }
 
 int main()
@@ -98,19 +74,19 @@ int main()
     int n;
     cin>>n;
 
-    vector<int> v(n);
-
-    for(int i=0; i<n; i++)
+    vector<int>v(n);
+    for(int i=0;i<n;i++)
         cin>>v[i];
 
-    vector<int>ans = solveLIS(v);
-    DBG(ans);
+    int LIS_len = solveLIS(v);
+    cout<<LIS_len<<endl;
 
     return 0;
 }
+
 /**
-5
-1 6 2 3 5
+10
+1 2 3 4 5 4 3 2 1 10
 **/
 
 template<class T1, class T2>
