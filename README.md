@@ -70,13 +70,12 @@
 * ***Prime Factorization***
   * [Using all primes](Algorithm/25%20Prime%20Factorization.cpp) : **O( (sqrt(N)/log(sqrt(N)) * logN )**
   * [Using only smallest prime factor](Algorithm/35%20Prime%20Factorization%20using%20SPF.cpp) : **O(logN)**
+  * [Prime Factorization in a range **[L,R]** ](/Algorithm/53%20Prime%20Factorization%20in%20a%20Range.cpp) **O( (R-L) * logN )  _[Optimized]_**
 * ***Divisors***
   * [Number of Divisors](Algorithm/26%20Divisors.cpp)
   * [Cumulative Sum of Number of Divisors](Algorithm/26%20Divisors.cpp)
   * [Sum of Divisors](Algorithm/26%20Divisors.cpp)
   * [Cumulative Sum of Sum of Divisors](Algorithm/26%20Divisors.cpp)
-  * [All Prime Divisors](Algorithm/36%20Find%20All%20Prime%20Divisors%20of%20N.cpp) 
-    : **O( sqrt (N) )**
 * [***Euler Totient***](Algorithm/27%20Euler%20Totient.cpp)
 * ***Linear Diophantine***
   * [2 Variable](Algorithm/29%20Linear_Diophantine.cpp)
@@ -295,20 +294,22 @@
   * [N-digit binary strings without any consecutive 1’s](Dynamic%20Programming/18%20Count%20N%20digit%20binary%20string%20without%20consecutive%201's.cpp)
   
 # Miscellaneous
- * ***Operator Overloading for sorting / STL Data Structure***
-   * [Using Comparator ***functions / structure***](Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%201).cpp)
-   * [Overloading **<** operator](Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%202).cpp)
-   * [Overloading **>** operator](Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%203).cpp)
+ - ***Operator Overloading for sorting / STL Data Structure***
+   - [Using Comparator ***functions / structure***](Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%201).cpp)
+   - [Overloading **<** operator](Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%202).cpp)
+   - [Overloading **>** operator](Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%203).cpp)
    
- * [***BIg Integer Library***](Miscellaneous/06%20Big_Integer.cpp)
+- [_**Coordinate Compression**_](/Miscellaneous/07%20Coordinate%20Compression.cpp)
+
+ - [***BIG Integer Library***](Miscellaneous/06%20Big_Integer.cpp)
    
- * ***Integer Root***
-   * [Square Root *(Binary Search)*](Miscellaneous/04%20Square%20Root%20Binary%20Search.cpp) **(Modifiable to nth Root)**
-   * [Fast Square & Cube Root](Miscellaneous/05%20Fast%20Integer%20Cube%20and%20Square%20Root.cpp)
+ - ***Integer Root***
+   - [Square Root *(Binary Search)*](Miscellaneous/04%20Square%20Root%20Binary%20Search.cpp) **(Modifiable to nth Root)**
+   - [Fast Square & Cube Root](Miscellaneous/05%20Fast%20Integer%20Cube%20and%20Square%20Root.cpp)
  
- * ***Geometry Template***
-   * [Point & Line](Miscellaneous/02%20Geometry%20Template%20(Point%20%26%20Line).cpp)
-   * [Rectangle](Miscellaneous/03%20Geometry%20Template%20(Rectangle).cpp)
+ - ***Geometry Template***
+   - [Point & Line](Miscellaneous/02%20Geometry%20Template%20(Point%20%26%20Line).cpp)
+   - [Rectangle](Miscellaneous/03%20Geometry%20Template%20(Rectangle).cpp)
   
 
 
