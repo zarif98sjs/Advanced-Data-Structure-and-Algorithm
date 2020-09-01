@@ -41,6 +41,11 @@
 * ***DP***
   * [Subtree Size](Algorithm/38%20Subtree%20Size.cpp)
 * [***Binary Lifting***](https://github.com/zarif98sjs/Writeup/blob/master/Algorithms%20%26%20Data%20Structure/Binary%20Lifting.md)
+* _**Network Flow**_
+  - **Max Flow**
+    - [Ford Fulkerson](Algorithm/54%20Max%20Flow%20Ford%20Fulkerson.cpp)
+    - [Edmonds Karp](Algorithm/55%20Max%20Flow%20Edmonds%20Karp.cpp)
+    - [Dinic](Algorithm/56%20Max%20Flow%20Dinic.cpp)
 * ***Miscellaneous***
   * [Topological Sort](Algorithm/12%20Topological%20Sort.cpp)
   * [Strongly Connected Component (SCC)](Algorithm/13%20Strongly%20Connected%20Component.cpp)
