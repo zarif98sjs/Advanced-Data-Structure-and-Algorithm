@@ -41,15 +41,17 @@
 * ***DP***
   * [Subtree Size](Algorithm/38%20Subtree%20Size.cpp)
 * [***Binary Lifting***](https://github.com/zarif98sjs/Writeup/blob/master/Algorithms%20%26%20Data%20Structure/Binary%20Lifting.md)
+  - [Lowest Common Ancestor (LCA)](Algorithm/09%20Lowest%20Common%20Ancestor.cpp)
+  - [Tree Path Min/Max Query](Algorithm/59%20Tree%20Path%20Query.cpp)
 * _**Network Flow**_
   - **Max Flow**
     - [Ford Fulkerson](Algorithm/54%20Max%20Flow%20Ford%20Fulkerson.cpp)
     - [Edmonds Karp](Algorithm/55%20Max%20Flow%20Edmonds%20Karp.cpp)
     - [Dinic](Algorithm/56%20Max%20Flow%20Dinic.cpp)
 * ***Miscellaneous***
+  * Tree Diameter ([BFS](Algorithm/57%20Tree%20Diameter%20BFS.cpp) / [DFS](Algorithm/58%20Tree%20Diameter%20DFS.cpp))
   * [Topological Sort](Algorithm/12%20Topological%20Sort.cpp)
   * [Strongly Connected Component (SCC)](Algorithm/13%20Strongly%20Connected%20Component.cpp)
-  * [Lowest Common Ancestor (LCA)](Algorithm/09%20Lowest%20Common%20Ancestor.cpp)
 
 </details>
 
@@ -232,7 +234,8 @@
     ```
   * [Range **Sum** Query](Data%20Structure/07%20Mo's%20Algo%20(RANGE%20sum%20query).cpp)
   * [Range **Mode** (Highest Frequency) Query](Data%20Structure/09%20Mo's%20Algo%20(RANGE%20mode%20query%20Optimized).cpp)
-  * [Range **Number of Distinct Elements** Query](Data%20Structure/30%20Range%20Distinct%20Elements.cpp)
+  * [Range **Mode Sum** (Sum of all element with highest frequency) Query](Data%20Structure/09.2%20Mo's%20Algo%20(Range%20mode%20sums).cpp)
+  * [Range **Number of Distinct Elements** Query](Data%20Structure/30%20Mo's%20Algo%20(Range%20Distinct%20Elements).cpp)
 * ***Suffix Array***
   * [**O( N^2 logN )**](Data%20Structure/20%20Suffix%20Array%201.cpp)
   * [**O( N (logN)^2 )**](Data%20Structure/21%20Suffix%20Array%202.cpp)

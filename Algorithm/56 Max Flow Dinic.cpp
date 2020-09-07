@@ -13,13 +13,27 @@ Algorithm
 ---------
 Dinic's Blocking Flow
 
-Step 1 : Construct Level Graph (LG)
-Step 2 : Start at source , advance along an edge in LG until reach sink or get stuck.
+Step 1 :
+Construct Level Graph (LG) .
+If sink can't be reached MAXFLOW has been achieved . Terminate .
+Else continue
+
+Step 2 :
+Start at source , find an augmenting path in LG until you reach sink or get stuck.
+
 Step 3 :
 If reach sink : augment flow . Update LG (remove from LG edges with bottleneck capacity) and restart from source
-else if stuck : delete node from LG and restart from source.
+else if stuck (aka blocking flow) : delete node from LG and restart from source.
 
-Repeat
+Repeat Step 1 when there is no augmenting paths anymore .
+
+Implementation Optimization
+---------------------------
+Dinic :
+Dinic's idea to avoid dead end was to delete the nodes that we get stuck
+
+Shimon Even and Alon Atai Optmization :
+Pruning dead ends by tracking which next edge should be taken .
 
 Complexity
 ----------
@@ -96,9 +110,10 @@ struct Dinic
 
     int n, source, sink;
     vector<vector<Edge>> adj;
-    vector<int>level , iter;
+    vector<int>level , next_iter;
+    /// next_iter : Shimon Even and Alon Atai Optmization
 
-    Dinic(int n) : n(n) , adj(n) , level(n) , iter(n) {}
+    Dinic(int n) : n(n) , adj(n) , level(n) , next_iter(n) {}
 
     void add_edge(int src,int dst,flow_type capacity)
     {
@@ -140,21 +155,21 @@ struct Dinic
     flow_type dfs(int u,flow_type amount)
     {
         if(u==sink) return amount;
-        for(int &it = iter[u] ;it<(int)adj[u].size();it++) /// by tracking iterator this way , we won't have to delete the edges with bottleneck capacity
+        for(int &it = next_iter[u] ;it<(int)adj[u].size();it++) /// by tracking iterator this way , we won't have to delete the edges with bottleneck capacity : Shimon Even and Alon Atai Optmization
         {
             Edge &e = adj[u][it] , &r = adj[e.dst][e.rev];
             int v = e.dst;
 
             if(level[v]>level[u] && e.capacity-e.flow > 0)
             {
-                flow_type sent = dfs(v,min(amount,e.capacity-e.flow));
+                flow_type bottleneck = dfs(v,min(amount,e.capacity-e.flow));
 
-                if(sent>0)
+                if(bottleneck>0)
                 {
-                    e.flow += sent;
-                    r.flow -= sent;
+                    e.flow += bottleneck;
+                    r.flow -= bottleneck;
 
-                    return sent;
+                    return bottleneck;
                 }
             }
         }
@@ -168,17 +183,17 @@ struct Dinic
         this->sink = sink;
 
         flow_type MAXFLOW = 0;
-        flow_type sent = -1;
+        flow_type bottleneck = -1;
 
         while(level_graph() >= 0)
         {
-            sent = -1;
-            fill(ALL(iter),0);
+            bottleneck = -1;
+            fill(ALL(next_iter),0);
 
-            while(sent != 0)
+            while(bottleneck != 0)
             {
-                sent = dfs(source,LLONG_MAX);
-                MAXFLOW += sent;
+                bottleneck = dfs(source,LLONG_MAX);
+                MAXFLOW += bottleneck;
             }
         }
 

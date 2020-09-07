@@ -71,36 +71,48 @@ struct FordFulkerson
 {
     typedef long long flow_type;
 
+    struct Edge{
+        int src,dst;
+        flow_type capacity , flow;
+        size_t rev; /// position of the reverse edge in destinations's adj list
+    };
+
     int n, source, sink;
-    vector<vector<flow_type>> cap;
+    vector<vector<Edge>> adj;
     vector<bool>vis;
 
-    FordFulkerson(int n) : n(n), cap(n,vector<flow_type>(n,0)), vis(n) {}
+    FordFulkerson(int n) : n(n) , adj(n) ,vis(n) {}
 
     void add_edge(int src,int dst,flow_type capacity)
     {
-        cap[src][dst] += capacity; /// using += for being in safezone for duplicate edges
+        Edge forward{src,dst,capacity,0,adj[dst].size()};
+        Edge reverse{dst,src,0,0,adj[src].size()};
+
+        adj[src].push_back(forward);
+        adj[dst].push_back(reverse); /// adding this edge for reverse graph
     }
 
-    flow_type dfs(int u, flow_type amount)
+    flow_type dfs(int u,flow_type amount)
     {
         if(u==sink) return amount;
 
         vis[u] = true;
 
-        for(int v=0; v<n; v++) /// another way would be to make the adj list undirected and traverse over that
+        for(auto &e:adj[u])
         {
-            if(!vis[v] && cap[u][v]>0)
+            int v = e.dst;
+            Edge &r = adj[v][e.rev];
+
+            if(!vis[v] && e.capacity-e.flow > 0)
             {
-                flow_type sent = dfs(v,min(amount,cap[u][v]));
+                flow_type bottleneck = dfs(v,min(amount,e.capacity-e.flow));
 
-                if(sent > 0) /// if any path with bottleneck > 0 exists
+                if(bottleneck>0) /// if any path with bottleneck > 0 exists
                 {
-//                    cout<<u<<" , "<<v<<endl; /// the path
-                    cap[u][v] -= sent; /// bottleneck flow
-                    cap[v][u] += sent; /// reverse edge
+                    e.flow += bottleneck; /// augment flow
+                    r.flow -= bottleneck; /// reverse edge
 
-                    return sent;
+                    return bottleneck;
                 }
             }
         }
@@ -114,18 +126,16 @@ struct FordFulkerson
         this->sink = sink;
 
         flow_type MAXFLOW = 0;
-        flow_type sent = -1;
+        flow_type bottleneck = -1;
 
-        while(sent != 0)
+        while(bottleneck != 0)
         {
             fill(ALL(vis),false);
-
-            sent = dfs(source,LLONG_MAX);
-            MAXFLOW += sent;
+            bottleneck = dfs(source,LLONG_MAX);
+            MAXFLOW += bottleneck;
         }
 
         return MAXFLOW;
-
     }
 };
 
