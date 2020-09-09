@@ -13,24 +13,8 @@ A data structure to quickly do the following -
 
 Operations
 ----------
-
 - Add value to an index                 : O(NlogN)
 - Calculate Prefix Sum upto an index    : O(NlogN)
-
-Modification to do range updates
---------------------------------
-
-This is the same trick as we do for arrays .
-Imagine there are a lot of range updates and we only have to answer query after all updates .
-
-Then , we can do as follows :
-- Update a[l] = +value , a[r+1] = -value for each update
-- After all update operation calculate Prefix Sum Array
-
-The Prefix Sum Array will contain the value for each index after all update operations .
-
-If there were any update after query we again would have to calculate the Prefix Sum Array again in O(N) .
-Fenwick Tree allows us to do both this Point Update and Prefix Sum Array Update in O(logN) time .
 
 **/
 
@@ -101,13 +85,6 @@ struct Fenwick{
         return sum;
     }
 
-    /// RANGE update : adds val to [l,r]
-    void update(int l,int r,LL val)
-    {
-        add(l,val);
-        add(r+1,-val);
-    }
-
     void debug()
     {
         cout<<"Prefix Sum Array : ";
@@ -121,50 +98,13 @@ int main()
 {
     optimizeIO();
 
-    int n,q;
-    cin>>n>>q;
-
-    Fenwick f(n);
-
-    vector<LL>ara(n+1);
-    for(int i=1;i<=n;i++)
-    {
-        cin>>ara[i];
-        f.update(i,i,ara[i]);
-    }
-
-    while(q--)
-    {
-        f.debug();
-
-        int type;
-        cin>>type;
-
-        if(type==1) /** POINT Query **/
-        {
-            int idx;
-            cin>>idx;
-
-            cout<<f.pref(idx)<<endl;
-        }
-        else if(type==2) /** RANGE update **/
-        {
-            int l,r;
-            LL val;
-            cin>>l>>r>>val;
-
-            f.update(l,r,val);
-        }
-    }
-
     return 0;
 }
 
 /**
 10 10
 3 4 0 0 0 0 1 2 3 3
-2 5 7 12
-1 4
+1 1 1
 **/
 
 template<class T1, class T2>
