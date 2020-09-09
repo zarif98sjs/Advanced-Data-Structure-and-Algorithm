@@ -1,8 +1,8 @@
 
 /**
 
-Fenwick Tree
-============
+2D Fenwick Tree
+===============
 
 Description
 -----------
@@ -13,8 +13,8 @@ A data structure to quickly do the following -
 
 Operations
 ----------
-- Add value to an index                 : O(logN)
-- Calculate Prefix Sum upto an index    : O(logN)
+- Add value to an index                 : O( (logN)^2 )
+- Calculate Prefix Sum upto an index    : O( (logN)^2 )
 
 **/
 
@@ -55,56 +55,64 @@ inline void optimizeIO()
 
 const int nmax = 2e5+7;
 
-/** BIT / FENWICK TREE **/
-/*** 1 based indexing ***/
+struct Fenwick2D{
 
-struct Fenwick{
+    vector<vector<LL>>BIT;
+    int R,C;
 
-    vector<LL>BIT;
-    int N;
-
-    Fenwick (int n) : BIT(n+1,0) , N(n) {}
+    Fenwick2D (int r,int c) : BIT(r+1,vector<LL>(c+1,0)) , R(r) , C(c) {}
 
     inline int LSB(int x) {return x&(-x);} /// find the number with first bit set
 
-    /// POINT update : adds val to index idx
-    void add(int idx,LL val)
+    /// POINT update : adds val to index (x,y)
+    void add(int x,int y,LL val)
     {
-        for(int i = idx ; i<=N ; i += LSB(i)) /// adding LSB , jumping to next segment covered by this index
-            BIT[i] += val;
+        for(int i = x ; i<=R ; i += LSB(i))
+            for(int j = y ; j<=C ; j += LSB(j))
+                BIT[i][j] += val;
     }
 
-    /// prefix sum upto index idx
-    LL pref(int idx)
+    /// prefix sum of [(1,1) , (x,y)] square
+    LL pref(int x,int y)
     {
         LL sum = 0;
 
-        for(int i = idx ; i>0 ; i -= LSB(i)) /// removing LSB , jumping to next segment covering upto index
-            sum += BIT[i];
+        for(int i = x ; i>0 ; i -= LSB(i))
+            for(int j = y ; j>0 ; j -= LSB(j))
+            sum += BIT[i][j];
 
         return sum;
     }
 
     void debug()
     {
-        cout<<"Prefix Sum Array : ";
-        for(int i=1;i<=N;i++)
-            cout<<pref(i)<<" ";
+        cout<<"Prefix Sum Array :\n";
+        for(int i=1; i<=R; i++)
+        {
+            for(int j=1; j<=C; j++)
+                cout<<pref(i,j)<<" ";
+            cout<<endl;
+        }
         cout<<endl;
     }
 };
+
 
 int main()
 {
     optimizeIO();
 
+    int r,c;
+    cin>>r>>c;
+
+    Fenwick2D f(r,c);
+
     return 0;
 }
 
 /**
-10 10
-3 4 0 0 0 0 1 2 3 3
-1 1 1
+5 6 5
+2 2 2 4 5 1
 **/
 
 template<class T1, class T2>

@@ -13,8 +13,8 @@ A data structure to quickly do the following -
 
 Operations
 ----------
-- Add value to an index                 : O(NlogN)
-- Calculate Prefix Sum upto an index    : O(NlogN)
+- Add value to an index                 : O(logN)
+- Calculate Prefix Sum upto an index    : O(logN)
 
 **/
 

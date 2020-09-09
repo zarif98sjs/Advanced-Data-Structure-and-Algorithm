@@ -172,12 +172,12 @@
 
 * [***Disjoint Set***](Data%20Structure/12%20Disjoint%20Set.cpp)
 
-* [_**Fenwick Tree / Binary Indexed Tree**_](Data%20Structure/00%20BIT.cpp)
+* _**Fenwick Tree / Binary Indexed Tree**_
   ```ruby
   point update : O(logN)
   prefix sum array update : O(logN)
   ```
-  * *1D BIT*
+  * [*1D BIT*](Data%20Structure/00%20BIT.cpp)
     * [Point Update , Range Query , ***lower_bound*** , ***upper_bound*** ](Data%20Structure/01%20BIT%20(POINT%20update%20%2C%20RANGE%20query).cpp)  
       ```ruby
       lower_bound , upper_bound
@@ -186,8 +186,13 @@
       binary lifting - O(logN)
       ```
     * [Range Update , Point Query](Data%20Structure/02%20BIT%20(RANGE%20update%20%2C%20POINT%20query).cpp)    
-  * *2D BIT*
+  * [*2D BIT*](Data%20Structure/10.0%202D%20BIT.cpp)
+    ```ruby
+    point update : O( (logN)^2 )
+    2D prefix sum array update : O( (logN)^2 )
+    ```
     * [Point Update , Range Query](Data%20Structure/10%202D%20BIT%20(POINT%20update%2C%20RANGE%20query).cpp)
+    * [Range Update , Point Query](Data%20Structure/10.2%202D%20BIT%20(RANGE%20update%20,%20POINT%20query).cpp)
     
 * ***Recursive Segment Tree***
   * *Non Lazy (Point Update , Range Query)*
@@ -195,7 +200,7 @@
      build : O(N) 
      update , query : O(logN)
      ```
-    * [Range **Sum**](Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp) *( Possible Variations : Range [ **Multiplication , Min , Max , GCD , LCM , and , or , xor** ] )*
+    * [Range **Sum**](Data%20Structure/03%20Segment%20Tree%20(POINT%20update%20%2C%20RANGE%20query).cpp)   *( Possible Variations : Range [ **Multiplication , Min , Max , GCD , LCM , and , or , xor** ] )*
     * [Maximum **Prefix Sum** & Maximum **Suffix Sum** & Maximum Contiguous **SubArray Sum**](Data%20Structure/13%20Segment%20Tree%20Max%20Prefix_Suffix_SubArray%20Sum.cpp)
   * *Lazy (Range Update , Range Query)* 
      ```ruby
