@@ -52,6 +52,7 @@
   * Tree Diameter ([BFS](Algorithm/57%20Tree%20Diameter%20BFS.cpp) / [DFS](Algorithm/58%20Tree%20Diameter%20DFS.cpp))
   * [Topological Sort](Algorithm/12%20Topological%20Sort.cpp)
   * [Strongly Connected Component (SCC)](Algorithm/13%20Strongly%20Connected%20Component.cpp)
+  * [Tree Centroid](Algorithm/60%20Centroid.cpp)
 
 </details>
 
@@ -173,11 +174,11 @@
 * [***Disjoint Set***](Data%20Structure/12%20Disjoint%20Set.cpp)
 
 * _**Fenwick Tree / Binary Indexed Tree**_
-  ```ruby
-  point update : O(logN)
-  prefix sum array update : O(logN)
-  ```
   * [*1D BIT*](Data%20Structure/00%20BIT.cpp)
+    ```ruby
+    point update : O(logN)
+    prefix sum array update : O(logN)
+    ```
     * [Point Update , Range Query , ***lower_bound*** , ***upper_bound*** ](Data%20Structure/01%20BIT%20(POINT%20update%20%2C%20RANGE%20query).cpp)  
       ```ruby
       lower_bound , upper_bound
