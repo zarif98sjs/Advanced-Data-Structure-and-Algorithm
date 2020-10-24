@@ -102,7 +102,7 @@ public:
 		if (parent[k] == k)
 			return k;
 
-		return Find(parent[k]);
+		return parent[k] =Find(parent[k]);
 	}
 
 	void Union(int a, int b)
