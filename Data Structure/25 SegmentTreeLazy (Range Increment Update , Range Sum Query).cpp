@@ -18,6 +18,7 @@ using namespace std;
 #define DBG(x)      cout << __LINE__ << " says: " << #x << " = " << (x) << endl
 #else
 #define DBG(x)
+#define endl "\n"
 #endif
 
 template<class T1, class T2>
@@ -35,190 +36,198 @@ inline void optimizeIO()
 
 const int nmax = 2e5+7;
 
-LL ara[nmax];
+#define int long long
 
-/** Segment Tree **/
-/*** 1 based indexing ***/
-
-struct node
+struct Node
 {
-    LL sum ;
-    LL lazy;
+    int sum;
+    int lazy;
 
-    node()
+    Node() /// change here
     {
-        sum = 0;
-        lazy = 0;
+        sum = 0 , lazy = 0;
     }
 
-    void create_leaf(LL val)
+    void create_leaf(int val) /// change here
     {
-        sum = val;
-        lazy = 0;
+        sum = val , lazy = 0;
     }
-
-    void merge_nodes(node &A,node &B)
-    {
-        sum = A.sum + B.sum;
-    }
-
 };
 
-const int nmax2 = nmax<<2;
-node Tree[nmax2];
-
-void build(int cur,int start,int end) /** build the segment tree **/
+Node merge_nodes(Node &a,Node &b) /// change here
 {
-    if(start==end)
+    Node temp;
+    temp.sum = a.sum + b.sum;
+
+    return temp;
+}
+
+struct LazySegTree
+{
+    int n;
+    vector<int>data;
+    vector<Node>Tree;
+
+    LazySegTree(int n)
     {
-        Tree[cur].create_leaf(ara[start]);
+        this->n = n;
+        int len = n+1;
+
+        data = vector<int>(len);
+        Tree = vector<Node>(len<<2);
+    }
+
+    void build()
+    {
+        build(1,1,n);
         return;
     }
 
-    int mid = (start+end)>>1;
-    int lc = cur<<1, rc = lc|1;
-
-    build(lc,start,mid);
-    build(rc,mid+1,end);
-
-    Tree[cur].merge_nodes(Tree[lc],Tree[rc]);
-
-}
-
-void node_update(int v,int st,int en,LL add)
-{
-    Tree[v].sum += (en-st+1)*add; /** Multiplying the size of the current node **/
-    Tree[v].lazy += add;
-}
-
-void push(int v,int st,int en)
-{
-    int mid = (st+en)>>1;
-    int lc = v<<1, rc = lc|1;
-
-    if(Tree[v].lazy)
+    void build(int cur,int start,int end)
     {
-        node_update(lc,st,mid,Tree[v].lazy);   /** Multiplying the size of the left node with the parent's lazy value **/
-        node_update(rc,mid+1,en,Tree[v].lazy); /** Multiplying the size of the right node with the parent's lazy value **/
+        if(start==end)
+        {
+            Tree[cur].create_leaf(data[start]);
+            return;
+        }
 
-        Tree[v].lazy = 0;
+        int mid = (start+end)>>1;
+        int lc = cur<<1 , rc = lc|1;
+
+        build(lc,start,mid);
+        build(rc,mid+1,end);
+
+        Tree[cur] = merge_nodes(Tree[lc],Tree[rc]);
+    }
+
+    void node_update(int v,int st,int en,int add) /// change here
+    {
+        Tree[v].sum += (en-st+1) * add;
+        Tree[v].lazy += add;
+    }
+
+    void push(int v,int st,int en)
+    {
+        int mid = (st+en)>>1;
+        int lc = v<<1, rc = lc|1;
+
+        if(Tree[v].lazy && st!=en) /// not leaf and lazy node
+        {
+            node_update(lc,st,mid,Tree[v].lazy);   /** Multiplying the size of the left node with the parent's lazy value **/
+            node_update(rc,mid+1,en,Tree[v].lazy); /** Multiplying the size of the right node with the parent's lazy value **/
+
+            Tree[v].lazy = 0;
+        }
+    }
+
+    void update(int ql,int qr,int add)
+    {
+        update(1,1,n,ql,qr,add);
+    }
+
+    void update(int cur,int start,int end,int ql,int qr,int add)
+    {
+        push(cur,start,end);
+
+        if(end<ql || start>qr) return;
+
+        if(start>=ql && end<=qr)
+        {
+            node_update(cur,start,end,add);
+            // push(cur,start,end);
+            return;
+        }
+
+        int mid = (start+end)>>1;
+        int lc = cur<<1 , rc = lc|1;
+
+        update(lc,start,mid,ql,qr,add);
+        update(rc,mid+1,end,ql,qr,add);
+
+        Tree[cur] = merge_nodes(Tree[lc],Tree[rc]); /// bottom up correction after update
+    }
+
+    Node query(int ql,int qr)
+    {
+        return query(1,1,n,ql,qr);
+    }
+
+    Node query(int cur,int start,int end,int ql,int qr)
+    {
+        push(cur,start,end);
+
+        if(end<ql || start>qr) return Node();
+
+        if(start>=ql && end<=qr)
+        {
+//            cout<<start<<" , "<<end<<" : "<<Tree[cur].sum<<endl;
+
+            return Tree[cur];
+        }
+
+        int mid = (start+end)>>1;
+        int lc = cur<<1 , rc = lc|1;
+
+        /// query on both child
+        Node ansL = query(lc,start,mid,ql,qr);
+        Node ansR = query(rc,mid+1,end,ql,qr);
+
+        return merge_nodes(ansL,ansR);
+    }
+};
+
+int TC = 0;
+
+void solveTC()
+{
+    int n,q;
+    cin>>n>>q;
+
+    LazySegTree s(n);
+
+    for(int i=1;i<=n;i++) s.data[i] = 0;
+
+    s.build(1,1,n);
+
+    while(q--)
+    {
+        int type;
+        cin>>type;
+
+        if(type==0)
+        {
+            int l,r,add;
+            cin>>l>>r>>add;
+
+            s.update(l,r,add);
+        }
+        else
+        {
+            int l,r;
+            cin>>l>>r;
+
+            int ans = s.query(l,r).sum;
+            cout<<ans<<endl;
+        }
     }
 }
 
-
-void update(int cur, int start, int end, int l,int r, LL add)
-{
-    if(l>r)
-        return;
-
-    if (l==start && r==end)
-    {
-        node_update(cur,start,end,add);
-    }
-    else
-    {
-        int mid = (start + end)>>1;
-        int lc = cur<<1, rc = lc|1;
-
-        push(cur,start,end); /** Pushdown to children node **/
-
-        update(lc, start, mid,l,min(r,mid), add);
-        update(rc, mid+1, end,max(l,mid+1),r, add);
-
-        Tree[cur].merge_nodes(Tree[lc],Tree[rc]);
-    }
-}
-
-LL query(int cur,int start,int end,int l,int r) /** RANGE query **/
-{
-    if(l>r)
-        return 0;
-
-    if(start>=l && end<=r)
-    {
-        return Tree[cur].sum;
-    }
-
-    int mid = (start+end)>>1;
-    int lc = cur<<1, rc = lc|1;
-
-    push(cur,start,end); /** Pushdown to children node **/
-
-    LL p1 = query(lc,start,mid,l,min(r,mid));
-    LL p2 = query(rc,mid+1,end,max(l,mid+1),r);
-
-    return p1+p2; /// sum
-
-}
-
-void DEBUG(int n)
-{
-    cout<<"Current State : ";
-    for(int i=1;i<=n;i++)
-    {
-        LL t = query(1,1,n,i,i);
-
-        cout<<t<<" ";
-    }
-    cout<<endl;
-}
-
-int main()
+int32_t main()
 {
     optimizeIO();
 
-    int tc;
+    int tc = 1;
     cin>>tc;
 
     while(tc--)
     {
-        int n;
-        cin>>n;
-
-        for(int i=1;i<=n;i++)
-            cin>>ara[i];
-
-        build(1,1,n);
-
-        int q;
-        cin>>q;
-
-        while(q--)
-        {
-            DEBUG(n);
-
-            int type;
-            cin>>type;
-
-            if(type==1)
-            {
-                int l,r,val;
-                cin>>l>>r>>val;
-
-                update(1,1,n,l,r,val);
-            }
-            else
-            {
-                int l,r;
-                cin>>l>>r;
-
-                LL t = query(1,1,n,l,r);
-
-                cout<<"Sum : "<<t<<endl;
-            }
-        }
+        solveTC();
     }
 
     return 0;
 }
 
 /**
-
-5
-1 2 3 4 5
-
-6
-1 2 3 4 5 6
 
 **/
 
@@ -232,9 +241,9 @@ template <class T>
 ostream &operator <<(ostream &os, vector<T>&v)
 {
     os<<"[ ";
-    for(int i=0; i<v.size(); i++)
+    for(T i:v)
     {
-        os<<v[i]<<" " ;
+        os<<i<<" " ;
     }
     os<<" ]";
     return os;
@@ -251,5 +260,7 @@ ostream &operator <<(ostream &os, set<T>&v)
     os<<" ]";
     return os;
 }
+
+
 
 

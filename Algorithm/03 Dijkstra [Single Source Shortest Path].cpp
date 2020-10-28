@@ -1,13 +1,5 @@
 
-/**
-
-Complexity : O(ElogV)
-
-Note : No guarantee of working with negative weight , does not work with negative cycle either
-
-**/
-
-/**Which of the favors of your Lord will you deny ?**/
+/** Which of the favors of your Lord will you deny ? **/
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -15,31 +7,26 @@ using namespace std;
 #define LL long long
 #define PII pair<int,int>
 #define PLL pair<LL,LL>
-#define MP make_pair
 #define F first
 #define S second
 
-#define ALL(x) (x).begin(), (x).end()
-#define DBG(x) cerr << __LINE__ << " says: " << #x << " = " << (x) << endl
+#define ALL(x)      (x).begin(), (x).end()
+#define READ        freopen("alu.txt", "r", stdin)
+#define WRITE       freopen("vorta.txt", "w", stdout)
 
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
+#ifndef ONLINE_JUDGE
+#define DBG(x)      cout << __LINE__ << " says: " << #x << " = " << (x) << endl
+#else
+#define DBG(x)
+#define endl "\n"
+#endif
 
-template<class TIn>
-using indexed_set = tree<
-                    TIn, null_type, less<TIn>,
-                    rb_tree_tag, tree_order_statistics_node_update>;
-
-/*
-PBDS
--------------------------------------------------
-1) insert(value)
-2) erase(value)
-3) order_of_key(value) // 0 based indexing
-4) *find_by_order(position) // 0 based indexing
-
-*/
+template<class T1, class T2>
+ostream &operator <<(ostream &os, pair<T1,T2>&p);
+template <class T>
+ostream &operator <<(ostream &os, vector<T>&v);
+template <class T>
+ostream &operator <<(ostream &os, set<T>&v);
 
 inline void optimizeIO()
 {
@@ -48,102 +35,160 @@ inline void optimizeIO()
 }
 
 const int nmax = 2e5+7;
-const int INF = 1e9;
-const LL LINF = 1e17;
+const int INF = 1e9+7;
 
-string to_str(LL x)
+struct Graph
 {
-    stringstream ss;
-    ss<<x;
-    return ss.str();
-}
+    int n;
+    bool dir;
+    vector<vector<PII>>adj;
 
-//bool cmp(const PII &A,const PII &B)
-//{
-//
-//}
+    vector<int>dist;
+    vector<int>par;
 
-int n,m;
-
-vector<PII>adj[nmax];
-vector<int>dist(nmax,INF);
-vector<int>par(nmax,-1);
-
-void dijkstra(int s)
-{
-    priority_queue< PII,vector<PII>,greater<PII> >PQ;
-    dist[s] = 0;
-    PQ.push({0,s});
-
-    while(!PQ.empty())
+    Graph(int n,bool dir)
     {
-        int now = PQ.top().S;
-        PQ.pop();
+        this->n = n;
+        this->dir = dir;
+        int len = n+1;
 
-        for(auto x:adj[now])
+        adj = vector<vector<PII>>(len);
+        dist = vector<int>(len,INF);
+        par = vector<int>(len,-1);
+    }
+
+    void add_edge(int u,int v,int c)
+    {
+        adj[u].push_back({v,c});
+        if(!dir) adj[v].push_back({u,c});
+    }
+
+    void dijkstra(int s)
+    {
+        priority_queue< PII,vector<PII>,greater<PII> >PQ;
+        dist[s] = 0;
+        PQ.push({0,s});
+
+        while(!PQ.empty())
         {
-            int next = x.F;
-            int ed = x.S;
+            int now = PQ.top().S;
+            int now_d = PQ.top().F;
+            PQ.pop();
 
-            if(dist[now] + ed < dist[next])
+            if(now_d > dist[now]) continue; /// OPTIMIZATIONNNN
+
+            for(auto x:adj[now])
             {
-                dist[next] = dist[now] + ed;
-                par[next] = now;
-                PQ.push({dist[next],next});
+                int next = x.F;
+                int ed = x.S;
+
+                if(dist[now] + ed < dist[next])
+                {
+                    dist[next] = dist[now] + ed;
+                    par[next] = now;
+                    PQ.push({dist[next],next});
+                }
             }
         }
     }
 
-    for(int i=1; i<=n; i++)
-        cout<<i<<" -> "<<dist[i]<<endl;
-
-}
-
-void get_sp(int s,int t)
-{
-    vector<int>path;
-    path.push_back(t);
-
-    while(par[t]!=-1)
+    void get_sp(int t)
     {
-        path.push_back(par[t]);
-        t = par[t];
+        if(dist[t]>=INF)
+        {
+            cout<<"IMPOSSIBLE"<<endl;
+            return;
+        }
+
+        cout<<dist[t]<<endl;
+
+        vector<int>path;
+        path.push_back(t);
+
+        while(par[t]!=-1)
+        {
+            path.push_back(par[t]);
+            t = par[t];
+        }
+
+        reverse(ALL(path));
+
+        for(int x:path)
+            cout<<x<<" ";
+        cout<<endl;
     }
 
-    reverse(ALL(path));
 
-    for(int x:path)
-        cout<<x<<" ";
-    cout<<endl;
-}
+    void solve()
+    {
 
-int main()
+    }
+};
+
+void solveTC()
 {
-    optimizeIO();
-
+    int n,m;
     cin>>n>>m;
+
+    Graph g(n,false); /// undirected
 
     for(int i=0; i<m; i++)
     {
-        int a,b,w;
-        cin>>a>>b>>w;
+        int a,b,c;
+        cin>>a>>b>>c;
 
-        adj[a].push_back({b,w});  /** Directed **/
-        //adj[b].push_back({a,w});
+        g.add_edge(a,b,c);
     }
 
-    while(true)
+    g.solve();
+}
+
+int32_t main()
+{
+    optimizeIO();
+
+    int tc = 1;
+//    cin>>tc;
+
+    while(tc--)
     {
-        int v;
-        cin>>v;
-        dijkstra(v);
-        get_sp(v,n);
-
+        solveTC();
     }
-
-
 
     return 0;
 }
 
+/**
+
+**/
+
+template<class T1, class T2>
+ostream &operator <<(ostream &os, pair<T1,T2>&p)
+{
+    os<<"{"<<p.first<<", "<<p.second<<"} ";
+    return os;
+}
+template <class T>
+ostream &operator <<(ostream &os, vector<T>&v)
+{
+    os<<"[ ";
+    for(T i:v)
+    {
+        os<<i<<" " ;
+    }
+    os<<" ]";
+    return os;
+}
+
+template <class T>
+ostream &operator <<(ostream &os, set<T>&v)
+{
+    os<<"[ ";
+    for(T i:v)
+    {
+        os<<i<<" ";
+    }
+    os<<" ]";
+    return os;
+}
 
