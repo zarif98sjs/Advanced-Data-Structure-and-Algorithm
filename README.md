@@ -235,6 +235,10 @@
     * [Point Update , Range Query](Data%20Structure/28%20Iterative%20Segment%20Tree%20(Point%20Update%2CRange%20Query).cpp)  
     *( Possible Variations : Range [ **Multiplication , Min , Max , GCD , LCM , and , or , xor** ] )*
     * [Range Update , Point Query](Data%20Structure/29%20Iterative%20Segment%20Tree%20(Range%20Update%2CPoint%20Query).cpp)
+
+* [***Implicit Segment Tree***](/Data%20Structure/33%20ImplicitSegmentTree%20(Point%20Update,Range%20Query).cpp)
+
+* [***Red Black Tree***](Data%20Structure/34%20Red%20Black%20Tree.cpp)
     
 * ***Sparse Table***
   * [Range Sum Query](Data%20Structure/31%20Sparse%20Table%20(Range%20Sum%20Query).cpp) : **O(logN)**
