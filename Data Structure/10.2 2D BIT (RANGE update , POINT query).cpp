@@ -16,6 +16,12 @@ Operations
 - Add value to an index                 : O( (logN)^2 )
 - Calculate Prefix Sum upto an index    : O( (logN)^2 )
 
+
+Modification to do range updates
+--------------------------------
+Same idea as 1D Fenwick Tree , but just need to handle more cases .
+Draw a diagram to visualize the cases
+
 **/
 
 /** Which of the favors of your Lord will you deny ? **/
@@ -84,14 +90,14 @@ struct Fenwick2D{
         return sum;
     }
 
-    /// sum of [(xl,yl) , (xh,yh)] square
-    LL sum(int xl,int yl,int xh,int yh)
+    /// update [(xl,yl) , (xh,yh)] square with val
+    void update(int xl,int yl,int xh,int yh,LL val)
     {
-        LL v1 = pref(xh, yh);
-        LL v2 = pref(xh, yl-1);
-        LL v3 = pref(xl-1, yh);
-        LL v4 = pref(xl-1, yl-1);
-        return v1 - v2 - v3 + v4;
+        /// draw a picture to visualize
+        add(xl,yl,val);
+        add(xl,yh+1,-val);
+        add(xh+1,yl,-val);
+        add(xh+1,yh+1,+val); /// deleted twice in prev operations , so adding again
     }
 
     void debug()
@@ -127,17 +133,17 @@ int main()
         if(type==1)
         {
             int x,y;
-            LL val;
-            cin>>x>>y>>val;
+            cin>>x>>y;
 
-            f.add(x,y,val); /// point update
+            cout<<f.pref(x,y)<<endl; /// point query
         }
         else if(type==2)
         {
             int x1,y1,x2,y2;
-            cin>>x1>>y1>>x2>>y2;
+            LL val;
+            cin>>x1>>y1>>x2>>y2>>val;
 
-            cout<<f.sum(x1,y1,x2,y2)<<endl; /// range sum
+            f.update(x1,y1,x2,y2,val); /// range update
         }
     }
 
