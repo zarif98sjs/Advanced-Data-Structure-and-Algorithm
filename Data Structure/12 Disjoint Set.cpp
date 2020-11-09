@@ -22,23 +22,6 @@ using namespace std;
 #define ALL(x) (x).begin(), (x).end()
 #define DBG(x) cerr << __LINE__ << " says: " << #x << " = " << (x) << endl
 
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
-
-template<class TIn>using indexed_set = tree<TIn, null_type, less<TIn>,rb_tree_tag, tree_order_statistics_node_update>;
-
-/**
-
-PBDS
--------------------------------------------------
-1) insert(value)
-2) erase(value)
-3) order_of_key(value) // 0 based indexing
-4) *find_by_order(position) // 0 based indexing
-
-**/
-
 template<class T1, class T2>
 ostream &operator <<(ostream &os, pair<T1,T2>&p);
 template <class T>
@@ -52,25 +35,8 @@ inline void optimizeIO()
     cin.tie(NULL);
 }
 
-const int nmax = 2e5+7;
-const LL LINF = 1e17;
-
-string to_str(LL x)
+struct DisjointSet
 {
-    stringstream ss;
-    ss<<x;
-    return ss.str();
-}
-
-//bool cmp(const PII &A,const PII &B)
-//{
-//
-//}
-
-class DisjointSet
-{
-public:
-
     unordered_map<int, int> parent;
 
     void makeSet(int N)

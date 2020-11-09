@@ -48,6 +48,9 @@
     - [Ford Fulkerson](Algorithm/54%20Max%20Flow%20Ford%20Fulkerson.cpp)
     - [Edmonds Karp](Algorithm/55%20Max%20Flow%20Edmonds%20Karp.cpp)
     - [Dinic](Algorithm/56%20Max%20Flow%20Dinic.cpp)
+* ***Techniques***
+  * [Tree Flattening](Algorithm/61%20Tree%20Flattening.cpp)
+  * [Tree Flattening Euler Tour](Algorithm/62%20Tree%20Flattening%20Euler%20Tour.cpp)
 * ***Miscellaneous***
   * Tree Diameter ([BFS](Algorithm/57%20Tree%20Diameter%20BFS.cpp) / [DFS](Algorithm/58%20Tree%20Diameter%20DFS.cpp))
   * [Topological Sort](Algorithm/12%20Topological%20Sort.cpp)
