@@ -328,8 +328,13 @@
   * [Bitmask DP 4 [ LightOj 1057 (Collecting Gold) ]](Dynamic%20Programming/30%20Bitmask%20DP%204%20%5BLightOj%201057%20Collecting%20Gold%5D.cpp)
 * ***Miscellaneous***
   * [N-digit binary strings without any consecutive 1’s](Dynamic%20Programming/18%20Count%20N%20digit%20binary%20string%20without%20consecutive%201's.cpp)
-  
-# Miscellaneous
+
+&nbsp; 
+
+<hr/>
+<h1 align="center">Miscellaneous</h1>
+<hr/>
+
  - ***Operator Overloading for sorting / STL Data Structure***
    - [Using Comparator ***functions / structure***](Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%201).cpp)
    - [Overloading **<** operator](Miscellaneous/01%20Operator%20Overloading%20for%20Sorting%20(Part%202).cpp)
@@ -348,6 +353,7 @@
    - [Rectangle](Miscellaneous/03%20Geometry%20Template%20(Rectangle).cpp)
   
 
+<hr/>
 
 ### Md. Zarif Ul Alam
 Computer Science & Engineering Department , BUET
