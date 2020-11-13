@@ -1,6 +1,8 @@
-# Advanced-Data-Structure-and-Algorithm
+<h1 align="center">Advanced-Data-Structure-and-Algorithm</h1>
 
-# Algorithm
+<hr/>
+<h1 align="center">Algorithm</h1>
+<hr/>
 
 <details>
 <summary>  
@@ -170,9 +172,12 @@
     * [Meet In The Middle](Algorithm/17%20Binary%20Search%20(Meet%20In%20The%20Middle).cpp)
    
 </details>
-  
-
-# Data Structure
+ 
+&nbsp; 
+ 
+<hr/>
+<h1 align="center">Data Structure</h1>
+<hr/>
 
 * [***Disjoint Set***](Data%20Structure/12%20Disjoint%20Set.cpp)
 
@@ -271,8 +276,11 @@
     * [Implementation 1](Data%20Structure/17%20PBDS%20Multiset.cpp) (*erase* doesn't work)
     * [Implementation 2](Data%20Structure/18%20PBDS%20Multiset%202.cpp)
 
-  
-# Dynamic Programming
+&nbsp; 
+
+<hr/>
+<h1 align="center">Dynamic Programming</h1>
+<hr/>
 
 * ***LCS Variant***
   * [Longest Common Subsequence](Dynamic%20Programming/01%20LCS.cpp)
