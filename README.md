@@ -110,7 +110,8 @@
 ▄█ ░█░ █▀▄ █ █░▀█ █▄█
 ```
 </summary>
-    
+
+ * [***String Hashing***](Algorithm/63%20String%20Hashing.cpp)   
  * [***Suffix Array***](Data%20Structure/23%20Suffix%20Array%204.cpp) : **O( NlogN )**
  * [***Longest Common Prefix (LCP) Array Construction***](Algorithm/43%20Longest%20Common%20Prefix.cpp) : **O(N)**
  * [***Prefix Function (KMP ALgorithm)***](Algorithm/44%20Prefix%20Function%20KMP.cpp) : **O(N)**
@@ -241,7 +242,16 @@
 
 * [***Implicit Segment Tree***](/Data%20Structure/33%20ImplicitSegmentTree%20(Point%20Update,Range%20Query).cpp)
 
+* [***AVL Tree***](Data%20Structure/39%20AdelsonVelskyLandisTree.cpp)
+
 * [***Red Black Tree***](Data%20Structure/34%20Red%20Black%20Tree.cpp)
+
+* ***Treap***
+  * [Classic Implementation](Data%20Structure/35%20Implicit%20Treap.cpp)
+  * [Implicit Treap](Data%20Structure/35%20Implicit%20Treap.cpp)
+    * [Range Update , Range Query](Data%20Structure/36%20Implicit%20Treap%20(Range%20Update%20,%20Range%20Query).cpp)
+    * [Cut Array Portions and Swap](Data%20Structure/37%20Implicit%20Treap%20(Cut%20Array%20partitions%20and%20Swap).cpp)
+    * [Range Delete or Insert , Palindrome Check](Data%20Structure/42%20Implicit%20Treap%20(Range%20Delete%20or%20Insert%20,%20Palindrome%20Check).cpp)
     
 * ***Sparse Table***
   * [Range Sum Query](Data%20Structure/31%20Sparse%20Table%20(Range%20Sum%20Query).cpp) : **O(logN)**
