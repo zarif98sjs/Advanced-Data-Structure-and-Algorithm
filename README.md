@@ -258,6 +258,10 @@
     * [Cut Array Portions and Swap](Data%20Structure/37%20Implicit%20Treap%20(Cut%20Array%20partitions%20and%20Swap).cpp)
     * [Range Delete or Insert , Palindrome Check](Data%20Structure/42%20Implicit%20Treap%20(Range%20Delete%20or%20Insert%20,%20Palindrome%20Check).cpp)
     
+* ***Hash Table***
+  * [Separate Chaining](Data%20Structure/40%20HashTable_SeparateChaining.cpp)
+  * [Open Addressing (Double Hashing , Custom Probing)](Data%20Structure/41%20HashTable_OpenAddressing.cpp)
+
 * ***Sparse Table***
   * [Range Sum Query](Data%20Structure/31%20Sparse%20Table%20(Range%20Sum%20Query).cpp) : **O(logN)**
   * [RMQ](Data%20Structure/32%20Sparse%20Table%20(RMQ).cpp) : **O(1)**
