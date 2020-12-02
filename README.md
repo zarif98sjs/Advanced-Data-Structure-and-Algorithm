@@ -306,7 +306,7 @@
   * Longest Increasing Subsequence
     - [O(N^2)](Dynamic%20Programming/05%20LIS.cpp)
     - [O( NlogN )](Dynamic%20Programming/05.2%20LIS%20(Binary%20Search).cpp) **Binary Search**
-    - [O( NlogN )]() **Segment Tree** //code not added
+    - [O( NlogN )](/Dynamic%20Programming/05.3%20LIS%20(Segment%20Tree).cpp) **Segment Tree**
   * [Longest Bitonic Subsequence](Dynamic%20Programming/09%20Longest%20Bitonic%20Subsequence.cpp)
   * [Increasing Subsequence with Maximum Sum](Dynamic%20Programming/10%20Increasing%20Subsequence%20with%20Maximum%20Sum.cpp)
   * [Longest Increasing Index-Dividing Subsequence](Dynamic%20Programming/32%20Longest%20increasing%20index%20dividing%20subsequence.cpp)
