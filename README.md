@@ -53,6 +53,7 @@
 * ***Techniques***
   * [Tree Flattening](Algorithm/61%20Tree%20Flattening.cpp)
   * [Tree Flattening Euler Tour](Algorithm/62%20Tree%20Flattening%20Euler%20Tour.cpp)
+  * [Rerooting](Algorithm/64%20Rerooting.cpp)
 * ***Miscellaneous***
   * Tree Diameter ([BFS](Algorithm/57%20Tree%20Diameter%20BFS.cpp) / [DFS](Algorithm/58%20Tree%20Diameter%20DFS.cpp))
   * [Topological Sort](Algorithm/12%20Topological%20Sort.cpp)
