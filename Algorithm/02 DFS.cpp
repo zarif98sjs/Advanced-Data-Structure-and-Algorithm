@@ -49,21 +49,22 @@ inline void optimizeIO()
 const int nmax = 2e5+7;
 const LL LINF = 1e17;
 
-string to_str(LL x)
-{
-    stringstream ss;
-    ss<<x;
-    return ss.str();
-}
-
-//bool cmp(const PII &A,const PII &B)
-//{
-//
-//}
-
 vector<int>adj[nmax];
 vector<bool>vis(nmax,false);
 vector<int>dist(nmax,0);
+
+/**
+ * 
+ * For tree, it is sufficient to only keep track of parent
+ * 
+ * void dfs(int u,int p)
+ * {
+ *      for(int v:adj[u])      
+ *          if(v != p)
+ *              dfs(v,u); 
+ * }
+ * 
+ **/
 
 void dfs(int u)
 {
