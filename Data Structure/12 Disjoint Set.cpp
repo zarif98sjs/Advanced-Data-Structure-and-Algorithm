@@ -35,14 +35,30 @@ inline void optimizeIO()
     cin.tie(NULL);
 }
 
+/**
+ * 
+ * Disjoint Set 
+ * 1 based indexing
+ * 
+ **/
+
 struct DisjointSet
 {
     unordered_map<int, int> parent;
+    vector<int>sz;
+    int comp;
+
+    vector<vector<int>>g; /// extra part
 
     void makeSet(int N)
     {
+        sz = vector<int>(N+1,1);
+        g = vector<vector<int>>(N+1); /// extra part
+
         for (int i = 1; i <= N; i++)
-            parent[i] = i;
+            parent[i] = i, g[i].push_back(i);
+
+        comp = N;
     }
 
     int Find(int k)
@@ -59,7 +75,24 @@ struct DisjointSet
         int x = Find(a);
         int y = Find(b);
 
+        if(x==y) return;
+
+        /**
+            merge is done according to size
+            if we do that, when we maintain adjacency list, we can merge small to large component
+            this optimizes the union process
+        **/
+
+        if(sz[x] < sz[y]) swap(x,y);
+
+        sz[x] += sz[y];
         parent[y] = x;
+
+        /// extra part
+        g[x].insert(g[x].end(), ALL(g[y]));
+        g[y].clear();
+
+        comp--;
     }
 
     void printParent(int N)
@@ -67,7 +100,6 @@ struct DisjointSet
         for (int i = 1; i <= N; i++)
             cout<<parent[i]<<" ";
         cout<<endl;
-
     }
 };
 
