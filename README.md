@@ -372,6 +372,15 @@
  - ***Geometry Template***
    - [Point & Line](Miscellaneous/02%20Geometry%20Template%20(Point%20%26%20Line).cpp)
    - [Rectangle](Miscellaneous/03%20Geometry%20Template%20(Rectangle).cpp)
+
+<hr/>
+
+<p align="center">
+ <b> <i>If you like my work, you can also support me by buying me a cup of coffee!</i></b>
+</p>
+<p align="center">
+<a href="https://www.buymeacoffee.com/zarif98sjs" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+</p>
   
 
 <hr/>
