@@ -1,5 +1,11 @@
 <h1 align="center">Advanced-Data-Structure-and-Algorithm</h1>
 
+<p align="center">
+<a href="https://visitcount.itsvg.in">
+  <img src="https://visitcount.itsvg.in/api?id=zarif98sjs&label=Views&color=11&icon=5&pretty=true" />
+</a>
+</p>
+
 <hr/>
 <h1 align="center">Algorithm</h1>
 <hr/>
